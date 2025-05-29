@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\ClaseRepository.cs" />
+    <Compile Include="AccesoDatos\EntrenadorRepository.cs" />
     <Compile Include="AccesoDatos\GymConnection.cs" />
     <Compile Include="AccesoDatos\IClaseRepository.cs" />
+    <Compile Include="AccesoDatos\IEntrenadorRepository.cs" />
     <Compile Include="AccesoDatos\IMiembroRepository.cs" />
     <Compile Include="AccesoDatos\IReservaRepository.cs" />
     <Compile Include="AccesoDatos\MiembroRepository.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Entidades\Miembro.cs" />
     <Compile Include="Entidades\Reserva.cs" />
     <Compile Include="Negocio\ClaseService.cs" />
+    <Compile Include="Negocio\EntrenadorService.cs" />
     <Compile Include="Negocio\MiembroService.cs" />
     <Compile Include="Negocio\ReservaService.cs" />
     <Compile Include="Presentacion\AdminDashboard.cs">
@@ -146,8 +149,17 @@
     <EmbeddedResource Include="Presentacion\CancelarReservaForm.resx">
       <DependentUpon>CancelarReservaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ClaseNuevoForm.resx">
+      <DependentUpon>ClaseNuevoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ClasesForm.resx">
       <DependentUpon>ClasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\EntrenadoresForm.resx">
+      <DependentUpon>EntrenadoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\EntrenadorNuevoForm.resx">
+      <DependentUpon>EntrenadorNuevoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

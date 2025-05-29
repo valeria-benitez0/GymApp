@@ -83,5 +83,10 @@ namespace GymApp.Presentacion
             }
             return null; 
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

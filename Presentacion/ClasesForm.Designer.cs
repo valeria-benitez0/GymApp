@@ -50,6 +50,7 @@
             this.btnRefrescar.TabIndex = 9;
             this.btnRefrescar.Text = "Actualizar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // btnEliminarClase
             // 
@@ -59,6 +60,7 @@
             this.btnEliminarClase.TabIndex = 8;
             this.btnEliminarClase.Text = "Eliminar clase";
             this.btnEliminarClase.UseVisualStyleBackColor = true;
+            this.btnEliminarClase.Click += new System.EventHandler(this.btnEliminarClase_Click_1);
             // 
             // btnEditarClase
             // 
@@ -68,6 +70,7 @@
             this.btnEditarClase.TabIndex = 7;
             this.btnEditarClase.Text = "Editar clase";
             this.btnEditarClase.UseVisualStyleBackColor = true;
+            this.btnEditarClase.Click += new System.EventHandler(this.btnEditarClase_Click_1);
             // 
             // btnNuevaClase
             // 
@@ -77,6 +80,7 @@
             this.btnNuevaClase.TabIndex = 6;
             this.btnNuevaClase.Text = "Nueva clase";
             this.btnNuevaClase.UseVisualStyleBackColor = true;
+            this.btnNuevaClase.Click += new System.EventHandler(this.btnNuevaClase_Click_1);
             // 
             // dgvClases
             // 

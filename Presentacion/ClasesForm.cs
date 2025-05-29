@@ -44,9 +44,9 @@ namespace GymApp.Presentacion
         /// <summary>
         /// Abre el formulario para la creación de una nueva clase.
         /// </summary>
-        private void btnNuevaClase_Click(object sender, EventArgs e)
-        {
-            ClaseNuevoForm nuevoForm = new ClaseNuevoForm();
+        private void btnNuevaClase_Click_1(object sender, EventArgs e)
+        { 
+        ClaseNuevoForm nuevoForm = new ClaseNuevoForm();
             nuevoForm.ShowDialog();
             CargarClases();
         }
@@ -54,7 +54,7 @@ namespace GymApp.Presentacion
         /// <summary>
         /// Abre el formulario para editar la clase seleccionada.
         /// </summary>
-        private void btnEditarClase_Click(object sender, EventArgs e)
+        private void btnEditarClase_Click_1(object sender, EventArgs e)
         {
             if (dgvClases.SelectedRows.Count == 0)
             {
@@ -76,7 +76,7 @@ namespace GymApp.Presentacion
         /// <summary>
         /// Elimina la clase seleccionada, tras una confirmación.
         /// </summary>
-        private void btnEliminarClase_Click(object sender, EventArgs e)
+        private void btnEliminarClase_Click_1(object sender, EventArgs e)
         {
             if (dgvClases.SelectedRows.Count == 0)
             {
@@ -107,7 +107,8 @@ namespace GymApp.Presentacion
         /// <summary>
         /// Actualiza el listado de clases.
         /// </summary>
-        private void btnRefrescar_Click(object sender, EventArgs e)
+
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
             CargarClases();
         }

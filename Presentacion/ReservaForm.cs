@@ -10,85 +10,74 @@ using System.Windows.Forms;
 using GymApp.Entidades;
 using GymApp.Negocio;
 using GymApp.AccesoDatos;
+
 namespace GymApp.Presentacion
 {
     public partial class ReservaForm : Form
     {
-        private Miembro currentMiembro;
         private ReservaService reservaService;
-        private IClaseRepository claseRepository;
+        private ClaseService claseService;
+        private Miembro currentMiembro;
 
         public ReservaForm(Miembro miembro)
         {
             InitializeComponent();
             currentMiembro = miembro;
-
-            // Se inicializan los servicios y repositorios necesarios.
-            reservaService = new ReservaService(new ReservaRepository(), new MiembroRepository(), new ClaseRepository());
-            claseRepository = new ClaseRepository();
-
-            // Cargar las clases disponibles en el ComboBox.
+            reservaService = new ReservaService(new ReservaRepository(),
+                                                new MiembroRepository(),
+                                                new ClaseRepository());
+            claseService = new ClaseService(new ClaseRepository());
             CargarClasesDisponibles();
 
             dtpFechaReserva.MinDate = DateTime.Now.AddMinutes(30);
         }
 
-        /// Carga en el ComboBox (cmbClases) la lista de clases disponibles.
         private void CargarClasesDisponibles()
         {
             try
             {
-                IEnumerable<Clase> clases = claseRepository.ObtenerTodos();
-                // Convertir a lista para evitar problemas de enlace
-                cmbClases.DataSource = new List<Clase>(clases);
+                // Obtenemos todas las clases; se podrían filtrar por disponibilidad.
+                var clases = claseService.ObtenerTodasLasClases();
+                cmbClases.DataSource = clases.ToList();
                 cmbClases.DisplayMember = "NombreClase";
                 cmbClases.ValueMember = "ClaseID";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las clases: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar clases: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        /// Evento click del botón "Reservar" que intenta registrar la reserva.
         private void btnReservar_Click(object sender, EventArgs e)
         {
             try
             {
-                // Crear el objeto Reserva con la información ingresada.
-                Reserva nuevaReserva = new Reserva();
-                nuevaReserva.UsuarioID = currentMiembro.UsuarioID;
-
-                // Validar que se haya seleccionado una clase
-                if (cmbClases.SelectedItem is Clase claseSeleccionada)
+                if (cmbClases.SelectedItem == null)
                 {
-                    nuevaReserva.ClaseID = claseSeleccionada.ClaseID;
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, seleccione una clase válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    lblMensaje.Text = "Seleccione una clase.";
+                    lblMensaje.ForeColor = System.Drawing.Color.Red;
                     return;
                 }
 
-                // Asignar la fecha y hora de la reserva
+                // Se crea un objeto Reserva y se asigna la información.
+                Reserva nuevaReserva = new Reserva();
+                nuevaReserva.UsuarioID = currentMiembro.UsuarioID;
+                nuevaReserva.ClaseID = (int)cmbClases.SelectedValue;
+                // Se utiliza el valor del DateTimePicker.
                 nuevaReserva.FechaReserva = dtpFechaReserva.Value;
 
-                // Registrar la reserva usando el servicio, que realiza validaciones internas.
+                // Registrar la reserva (se realizan las validaciones internas en el service).
                 int nuevoId = reservaService.RegistrarReserva(nuevaReserva);
 
-                lblMensaje.Text = "Reserva registrada con éxito. ID: " + nuevoId;
-                lblMensaje.ForeColor = Color.Green;
+                lblMensaje.Text = "Reserva registrada exitosamente. ID: " + nuevoId;
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "Error al registrar la reserva: " + ex.Message;
-                lblMensaje.ForeColor = Color.Red;
+                lblMensaje.Text = "Error: " + ex.Message;
+                lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
-        private void ReservaForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
