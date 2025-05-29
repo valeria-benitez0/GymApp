@@ -15,75 +15,66 @@ namespace GymApp.Presentacion
 {
     public partial class CancelarReservaForm : Form
     {
-        private Miembro currentMiembro;
         private ReservaService reservaService;
+        private Miembro currentMiembro;
 
-        // Constructor recibe el miembro actual para filtrar sus reservas.
         public CancelarReservaForm(Miembro miembro)
         {
             InitializeComponent();
             currentMiembro = miembro;
-            // Se inicializa el servicio, asignando las dependencias necesarias.
-            reservaService = new ReservaService(new ReservaRepository(), new MiembroRepository(), new ClaseRepository());
-
-            // Cargar el listado de reservas para el miembro al iniciar
+            reservaService = new ReservaService(new ReservaRepository(),
+                                                new MiembroRepository(),
+                                                new ClaseRepository());
             CargarReservas();
         }
 
-        /// Método que carga o actualiza el DataGridView con las reservas activas del miembro.
+        /// <summary>
+        /// Carga las reservas activas del miembro en el DataGridView.
+        /// </summary>
         private void CargarReservas()
         {
             try
             {
-                IEnumerable<Reserva> reservas = reservaService.ObtenerReservasPorMiembro(currentMiembro.UsuarioID);
-                // Convertir a lista para tener un control completo
+                // Utilizamos el método del service que retorna reservas activas para el miembro.
+                var reservas = reservaService.ObtenerReservasPorMiembro(currentMiembro.UsuarioID);
                 dgvReservas.DataSource = reservas.ToList();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar reservas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar reservas: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Verifica que se haya seleccionado una reserva y llama a la lógica de negocio para cancelar la reserva.
-
-        private void btnCancelarReserva_Click_1(object sender, EventArgs e)
+        private void btnCancelarReserva_Click(object sender, EventArgs e)
         {
-            // Verificar que se haya seleccionado una fila en el DataGridView.
-            if (dgvReservas.SelectedRows.Count == 0)
-            {
-                lblMensaje.Text = "Seleccione una reserva para cancelar";
-                lblMensaje.ForeColor = System.Drawing.Color.Red;
-                return;
-            }
-
-            // Se asume que la columna "ReservaID" está presente en el DataGridView.
-            int reservaId = Convert.ToInt32(dgvReservas.SelectedRows[0].Cells["ReservaID"].Value);
-
             try
             {
-                // Invocar al servicio para cancelar la reserva, lo que aplicará las validaciones (p.ej., 24 horas de anticipación)
+                if (dgvReservas.SelectedRows.Count == 0)
+                {
+                    lblMensaje.Text = "Seleccione una reserva a cancelar.";
+                    lblMensaje.ForeColor = System.Drawing.Color.Red;
+                    return;
+                }
+
+                int reservaId = Convert.ToInt32(dgvReservas.SelectedRows[0].Cells["ReservaID"].Value);
+
                 reservaService.CancelarReserva(reservaId);
-                lblMensaje.Text = "Reserva cancelada correctamente.";
+                lblMensaje.Text = "Reserva cancelada exitosamente.";
                 lblMensaje.ForeColor = System.Drawing.Color.Green;
 
-                // Actualiza el listado de reservas para reflejar la cancelación.
                 CargarReservas();
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "Error al cancelar la reserva: " + ex.Message;
+                lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
 
-        private void btnRefrescar_Click_1(object sender, EventArgs e)
+        private void btnRefrescar_Click(object sender, EventArgs e)
         {
             CargarReservas();
-        }
-        private void CancelarReservaForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
