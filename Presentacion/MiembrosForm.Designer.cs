@@ -56,7 +56,7 @@
             this.FechaVencimientoMembresia,
             this.Rol,
             this.Activo});
-            this.dgvMiembros.Location = new System.Drawing.Point(30, 223);
+            this.dgvMiembros.Location = new System.Drawing.Point(42, 223);
             this.dgvMiembros.MultiSelect = false;
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

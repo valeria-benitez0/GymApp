@@ -68,7 +68,7 @@
             // 
             // btnGestionarReservas
             // 
-            this.btnGestionarReservas.Location = new System.Drawing.Point(371, 280);
+            this.btnGestionarReservas.Location = new System.Drawing.Point(381, 280);
             this.btnGestionarReservas.Name = "btnGestionarReservas";
             this.btnGestionarReservas.Size = new System.Drawing.Size(75, 23);
             this.btnGestionarReservas.TabIndex = 7;

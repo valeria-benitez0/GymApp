@@ -9,7 +9,7 @@ namespace GymApp.AccesoDatos
 {
     public interface IMiembroRepository
     {
-        void Crear(Miembro miembro);
+        void RegistrarMiembro(Miembro miembro);
         Miembro ObtenerPorId(int id);
         IEnumerable<Miembro> ObtenerTodos();
         void Actualizar(Miembro miembro);

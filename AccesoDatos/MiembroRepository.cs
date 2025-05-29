@@ -18,7 +18,7 @@ namespace GymApp.AccesoDatos
             connection = GymConnection.GetInstance().Connection;
         }
 
-        public void Crear(Miembro miembro)
+        public void RegistrarMiembro(Miembro miembro)
         {
             try
             {

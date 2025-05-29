@@ -10,37 +10,38 @@ namespace GymApp.Negocio
 {
     public class MiembroService
     {
-        private readonly IMiembroRepository miembroRepo;
+        private readonly IMiembroRepository miembroRepository;
 
-        public MiembroService(IMiembroRepository repo)
+        public MiembroService(IMiembroRepository miembroRepository)
         {
-            this.miembroRepo = repo;
+            this.miembroRepository = miembroRepository;
         }
 
-        public int CrearMiembro(Miembro miembro)
+        // Método para registrar un nuevo miembro.
+        public void RegistrarMiembro(Miembro miembro)
         {
-            miembroRepo.Crear(miembro);
-            return miembro.UsuarioID;
+            miembroRepository.RegistrarMiembro(miembro);
         }
 
+        // Método para actualizar un miembro existente.
         public void ActualizarMiembro(Miembro miembro)
         {
-            miembroRepo.Actualizar(miembro);
+            miembroRepository.Actualizar(miembro);
         }
 
         public void EliminarMiembro(int id)
         {
-            miembroRepo.Eliminar(id);
+            miembroRepository.Eliminar(id);
         }
 
         public Miembro ObtenerMiembroPorId(int id)
         {
-            return miembroRepo.ObtenerPorId(id);
+            return miembroRepository.ObtenerPorId(id);
         }
 
         public IEnumerable<Miembro> ObtenerTodosLosMiembros()
         {
-            return miembroRepo.ObtenerTodos();
+            return miembroRepository.ObtenerTodos();
         }
     }
 }

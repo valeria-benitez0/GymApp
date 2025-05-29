@@ -63,6 +63,7 @@
     <Compile Include="Entidades\Entrenador.cs" />
     <Compile Include="Entidades\Miembro.cs" />
     <Compile Include="Entidades\Reserva.cs" />
+    <Compile Include="Negocio\ClaseService.cs" />
     <Compile Include="Negocio\MiembroService.cs" />
     <Compile Include="Negocio\ReservaService.cs" />
     <Compile Include="Presentacion\AdminDashboard.cs">
@@ -145,11 +146,17 @@
     <EmbeddedResource Include="Presentacion\CancelarReservaForm.resx">
       <DependentUpon>CancelarReservaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ClasesForm.resx">
+      <DependentUpon>ClasesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MemberDashboard.resx">
       <DependentUpon>MemberDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MiembroNuevoForm.resx">
+      <DependentUpon>MiembroNuevoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MiembrosForm.resx">
       <DependentUpon>MiembrosForm.cs</DependentUpon>

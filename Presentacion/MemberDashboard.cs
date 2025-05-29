@@ -76,7 +76,6 @@ namespace GymApp.Presentacion
         // Abre el formulario que lista las reservas para cancelar la seleccionada.
         CancelarReservaForm cancelarForm = new CancelarReservaForm(usuarioActual);
             cancelarForm.ShowDialog();
-            // Actualiza el listado de reservas en dgvReservas, en caso de que esté visible.
         }
 
         private void MemberDashboard_Load(object sender, EventArgs e)

@@ -16,3 +16,5 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\Gym
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.csproj.Up2Date
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.exe
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.pdb
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ClasesForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MiembroNuevoForm.resources
