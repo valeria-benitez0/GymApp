@@ -48,6 +48,7 @@
             this.Controls.Add(this.dgvMiembros);
             this.Name = "MiembrosForm";
             this.Text = "MiembrosForm";
+            this.Load += new System.EventHandler(this.MiembrosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).EndInit();
             this.ResumeLayout(false);
 

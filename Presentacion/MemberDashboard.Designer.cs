@@ -28,57 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnVerClases = new System.Windows.Forms.Button();
-            this.btnReservar = new System.Windows.Forms.Button();
-            this.btnCancelarReserva = new System.Windows.Forms.Button();
-            this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.lblInfoMiembro = new System.Windows.Forms.Label();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
+            this.btnCancelarReserva = new System.Windows.Forms.Button();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.btnVerClases = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnVerClases
-            // 
-            this.btnVerClases.Location = new System.Drawing.Point(90, 78);
-            this.btnVerClases.Name = "btnVerClases";
-            this.btnVerClases.Size = new System.Drawing.Size(75, 23);
-            this.btnVerClases.TabIndex = 0;
-            this.btnVerClases.Text = "Consultar Clases";
-            this.btnVerClases.UseVisualStyleBackColor = true;
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Location = new System.Drawing.Point(90, 180);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
-            this.btnReservar.TabIndex = 1;
-            this.btnReservar.Text = "Realizar reserva";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelarReserva
-            // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(90, 285);
-            this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarReserva.TabIndex = 2;
-            this.btnCancelarReserva.Text = "Cancelar reserva";
-            this.btnCancelarReserva.UseVisualStyleBackColor = true;
-            // 
-            // dgvReservas
-            // 
-            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(427, 95);
-            this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(240, 150);
-            this.dgvReservas.TabIndex = 5;
             // 
             // lblInfoMiembro
             // 
             this.lblInfoMiembro.AutoSize = true;
-            this.lblInfoMiembro.Location = new System.Drawing.Point(427, 314);
+            this.lblInfoMiembro.Location = new System.Drawing.Point(449, 337);
             this.lblInfoMiembro.Name = "lblInfoMiembro";
             this.lblInfoMiembro.Size = new System.Drawing.Size(16, 13);
-            this.lblInfoMiembro.TabIndex = 6;
+            this.lblInfoMiembro.TabIndex = 11;
             this.lblInfoMiembro.Text = "...";
+            // 
+            // dgvReservas
+            // 
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservas.Location = new System.Drawing.Point(449, 118);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.Size = new System.Drawing.Size(240, 150);
+            this.dgvReservas.TabIndex = 10;
+            // 
+            // btnCancelarReserva
+            // 
+            this.btnCancelarReserva.Location = new System.Drawing.Point(112, 308);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarReserva.TabIndex = 9;
+            this.btnCancelarReserva.Text = "Cancelar reserva";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Location = new System.Drawing.Point(112, 203);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.TabIndex = 8;
+            this.btnReservar.Text = "Realizar reserva";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            // 
+            // btnVerClases
+            // 
+            this.btnVerClases.Location = new System.Drawing.Point(112, 101);
+            this.btnVerClases.Name = "btnVerClases";
+            this.btnVerClases.Size = new System.Drawing.Size(75, 23);
+            this.btnVerClases.TabIndex = 7;
+            this.btnVerClases.Text = "Consultar Clases";
+            this.btnVerClases.UseVisualStyleBackColor = true;
             // 
             // MemberDashboard
             // 
@@ -101,10 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnVerClases;
-        private System.Windows.Forms.Button btnReservar;
-        private System.Windows.Forms.Button btnCancelarReserva;
-        private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.Label lblInfoMiembro;
+        private System.Windows.Forms.DataGridView dgvReservas;
+        private System.Windows.Forms.Button btnCancelarReserva;
+        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Button btnVerClases;
     }
 }

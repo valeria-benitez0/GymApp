@@ -16,5 +16,10 @@ namespace GymApp.Presentacion
         {
             InitializeComponent();
         }
+
+        private void MiembrosForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

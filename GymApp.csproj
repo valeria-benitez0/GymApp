@@ -77,6 +77,30 @@
     <Compile Include="Presentacion\CancelarReservaForm.Designer.cs">
       <DependentUpon>CancelarReservaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\ClaseNuevoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ClaseNuevoForm.Designer.cs">
+      <DependentUpon>ClaseNuevoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ClasesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ClasesForm.Designer.cs">
+      <DependentUpon>ClasesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\EntrenadoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\EntrenadoresForm.Designer.cs">
+      <DependentUpon>EntrenadoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\EntrenadorNuevoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\EntrenadorNuevoForm.Designer.cs">
+      <DependentUpon>EntrenadorNuevoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +113,23 @@
     <Compile Include="Presentacion\MemberDashboard.Designer.cs">
       <DependentUpon>MemberDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\MiembroNuevoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MiembroNuevoForm.Designer.cs">
+      <DependentUpon>MiembroNuevoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\MiembrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\MiembrosForm.Designer.cs">
       <DependentUpon>MiembrosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ReportesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ReportesForm.Designer.cs">
+      <DependentUpon>ReportesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\ReservaForm.cs">
       <SubType>Form</SubType>

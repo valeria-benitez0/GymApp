@@ -28,44 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbClases = new System.Windows.Forms.ComboBox();
-            this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
-            this.btnReservar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
+            this.cmbClases = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // cmbClases
-            // 
-            this.cmbClases.FormattingEnabled = true;
-            this.cmbClases.Location = new System.Drawing.Point(209, 97);
-            this.cmbClases.Name = "cmbClases";
-            this.cmbClases.Size = new System.Drawing.Size(121, 21);
-            this.cmbClases.TabIndex = 0;
-            // 
-            // dtpFechaReserva
-            // 
-            this.dtpFechaReserva.Location = new System.Drawing.Point(209, 176);
-            this.dtpFechaReserva.Name = "dtpFechaReserva";
-            this.dtpFechaReserva.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaReserva.TabIndex = 1;
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Location = new System.Drawing.Point(209, 260);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
-            this.btnReservar.TabIndex = 2;
-            this.btnReservar.Text = "button1";
-            this.btnReservar.UseVisualStyleBackColor = true;
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(209, 345);
+            this.lblMensaje.Location = new System.Drawing.Point(300, 343);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(35, 13);
-            this.lblMensaje.TabIndex = 3;
+            this.lblMensaje.TabIndex = 7;
             this.lblMensaje.Text = "label1";
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Location = new System.Drawing.Point(300, 258);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.TabIndex = 6;
+            this.btnReservar.Text = "button1";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            // 
+            // dtpFechaReserva
+            // 
+            this.dtpFechaReserva.Location = new System.Drawing.Point(300, 174);
+            this.dtpFechaReserva.Name = "dtpFechaReserva";
+            this.dtpFechaReserva.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaReserva.TabIndex = 5;
+            // 
+            // cmbClases
+            // 
+            this.cmbClases.FormattingEnabled = true;
+            this.cmbClases.Location = new System.Drawing.Point(300, 95);
+            this.cmbClases.Name = "cmbClases";
+            this.cmbClases.Size = new System.Drawing.Size(121, 21);
+            this.cmbClases.TabIndex = 4;
             // 
             // ReservaForm
             // 
@@ -86,9 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbClases;
-        private System.Windows.Forms.DateTimePicker dtpFechaReserva;
-        private System.Windows.Forms.Button btnReservar;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.DateTimePicker dtpFechaReserva;
+        private System.Windows.Forms.ComboBox cmbClases;
     }
 }

@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.btnCancelarReserva = new System.Windows.Forms.Button();
+            this.dgvReservas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvReservas
-            // 
-            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(179, 93);
-            this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(240, 150);
-            this.dgvReservas.TabIndex = 0;
-            // 
-            // btnCancelarReserva
-            // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(488, 305);
-            this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarReserva.TabIndex = 1;
-            this.btnCancelarReserva.Text = "button1";
-            this.btnCancelarReserva.UseVisualStyleBackColor = true;
-            this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click_1);
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(502, 148);
+            this.lblMensaje.Location = new System.Drawing.Point(531, 163);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(35, 13);
-            this.lblMensaje.TabIndex = 2;
+            this.lblMensaje.TabIndex = 5;
             this.lblMensaje.Text = "label1";
+            // 
+            // btnCancelarReserva
+            // 
+            this.btnCancelarReserva.Location = new System.Drawing.Point(517, 320);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarReserva.TabIndex = 4;
+            this.btnCancelarReserva.Text = "button1";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            // 
+            // dgvReservas
+            // 
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservas.Location = new System.Drawing.Point(208, 108);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.Size = new System.Drawing.Size(240, 150);
+            this.dgvReservas.TabIndex = 3;
             // 
             // CancelarReservaForm
             // 
@@ -80,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvReservas;
-        private System.Windows.Forms.Button btnCancelarReserva;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Button btnCancelarReserva;
+        private System.Windows.Forms.DataGridView dgvReservas;
     }
 }

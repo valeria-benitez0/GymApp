@@ -13,6 +13,7 @@ namespace GymApp.Presentacion
 {
     public partial class AdminDashboard : Form
     {
+        // Variable para almacenar el usuario actual, que en este caso es el administrador.
         private Miembro usuarioActual;
 
         public AdminDashboard(Miembro miembro)
@@ -22,16 +23,38 @@ namespace GymApp.Presentacion
             lblBienvenida.Text = $"Bienvenido, {usuarioActual.Nombre} (Administrador)";
         }
 
-        // Ejemplo de un evento para el botón "Gestionar Miembros"
         private void btnGestionarMiembros_Click_1(object sender, EventArgs e)
         {
-            // Aquí abrirías el formulario para la gestión de miembros
-            // Ejemplo:
-            // MiembrosForm formMiembros = new MiembrosForm();
-            // formMiembros.ShowDialog();
+            MiembrosForm miembrosForm = new MiembrosForm();
+            miembrosForm.ShowDialog();
         }
 
+        private void btnGestionarClases_Click_1(object sender, EventArgs e)
+        {
+            ClasesForm clasesForm = new ClasesForm();
+            clasesForm.ShowDialog();
+        }
 
-        // Puedes agregar eventos similares para los otros botones.
+        private void btnGestionarEntrenadores_Click_1(object sender, EventArgs e)
+        {
+            EntrenadoresForm entrenadoresForm = new EntrenadoresForm();
+            entrenadoresForm.ShowDialog();
+        }
+
+        private void btnGestionarReservas_Click_1(object sender, EventArgs e)
+        {
+            CancelarReservaForm reservasForm = new CancelarReservaForm(usuarioActual);
+            reservasForm.ShowDialog();
+        }
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+            ReportesForm reportesForm = new ReportesForm();
+            reportesForm.ShowDialog();
+        }
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
