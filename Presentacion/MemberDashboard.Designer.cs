@@ -33,6 +33,8 @@
             this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.btnReservar = new System.Windows.Forms.Button();
             this.btnVerClases = new System.Windows.Forms.Button();
+            this.lblBienvenida = new System.Windows.Forms.Label();
+            this.btnRefrescarReservas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,34 +59,58 @@
             // 
             this.btnCancelarReserva.Location = new System.Drawing.Point(112, 308);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarReserva.Size = new System.Drawing.Size(166, 23);
             this.btnCancelarReserva.TabIndex = 9;
             this.btnCancelarReserva.Text = "Cancelar reserva";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click_1);
             // 
             // btnReservar
             // 
             this.btnReservar.Location = new System.Drawing.Point(112, 203);
             this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(75, 23);
+            this.btnReservar.Size = new System.Drawing.Size(150, 23);
             this.btnReservar.TabIndex = 8;
             this.btnReservar.Text = "Realizar reserva";
             this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click_1);
             // 
             // btnVerClases
             // 
             this.btnVerClases.Location = new System.Drawing.Point(112, 101);
             this.btnVerClases.Name = "btnVerClases";
-            this.btnVerClases.Size = new System.Drawing.Size(75, 23);
+            this.btnVerClases.Size = new System.Drawing.Size(117, 23);
             this.btnVerClases.TabIndex = 7;
             this.btnVerClases.Text = "Consultar Clases";
             this.btnVerClases.UseVisualStyleBackColor = true;
+            this.btnVerClases.Click += new System.EventHandler(this.btnVerClases_Click_1);
+            // 
+            // lblBienvenida
+            // 
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Location = new System.Drawing.Point(330, 33);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(60, 13);
+            this.lblBienvenida.TabIndex = 12;
+            this.lblBienvenida.Text = "Bienvenida";
+            // 
+            // btnRefrescarReservas
+            // 
+            this.btnRefrescarReservas.Location = new System.Drawing.Point(452, 378);
+            this.btnRefrescarReservas.Name = "btnRefrescarReservas";
+            this.btnRefrescarReservas.Size = new System.Drawing.Size(166, 23);
+            this.btnRefrescarReservas.TabIndex = 13;
+            this.btnRefrescarReservas.Text = "Actualizar";
+            this.btnRefrescarReservas.UseVisualStyleBackColor = true;
+            this.btnRefrescarReservas.Click += new System.EventHandler(this.btnRefrescarReservas_Click);
             // 
             // MemberDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefrescarReservas);
+            this.Controls.Add(this.lblBienvenida);
             this.Controls.Add(this.lblInfoMiembro);
             this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.btnCancelarReserva);
@@ -106,5 +132,7 @@
         private System.Windows.Forms.Button btnCancelarReserva;
         private System.Windows.Forms.Button btnReservar;
         private System.Windows.Forms.Button btnVerClases;
+        private System.Windows.Forms.Label lblBienvenida;
+        private System.Windows.Forms.Button btnRefrescarReservas;
     }
 }

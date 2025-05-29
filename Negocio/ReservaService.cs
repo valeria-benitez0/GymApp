@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,36 @@ namespace GymApp.Negocio
             // 5. Si todas las verificaciones pasan, registra la reserva.
             int nuevoId = reservaRepo.RegistrarReserva(reserva);
             return nuevoId;
+        }
+
+        public IEnumerable<Reserva> ObtenerReservasPorMiembro(int usuarioId)
+        {
+            List<Reserva> reservas = new List<Reserva>();
+            using (SqlConnection connection = GymConnection.GetInstance().Connection)
+            {
+                connection.Open();
+                string query = "SELECT * FROM Reservas WHERE UsuarioID = @UsuarioID AND Estado = 'Activa'";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@UsuarioID", usuarioId);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Reserva r = new Reserva
+                            {
+                                ReservaID = Convert.ToInt32(reader["ReservaID"]),
+                                UsuarioID = Convert.ToInt32(reader["UsuarioID"]),
+                                ClaseID = Convert.ToInt32(reader["ClaseID"]),
+                                FechaReserva = Convert.ToDateTime(reader["FechaReserva"]),
+                                Estado = reader["Estado"].ToString(),
+                            };
+                            reservas.Add(r);
+                        }
+                    }
+                }
+            }
+            return reservas;
         }
 
         /// <summary>
