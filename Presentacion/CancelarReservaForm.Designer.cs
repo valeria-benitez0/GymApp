@@ -50,6 +50,7 @@
             this.btnCancelarReserva.TabIndex = 1;
             this.btnCancelarReserva.Text = "button1";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click_1);
             // 
             // lblMensaje
             // 

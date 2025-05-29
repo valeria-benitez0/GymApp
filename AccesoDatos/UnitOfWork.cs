@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using GymApp.Entidades;
 
 namespace GymApp.AccesoDatos
 {
@@ -13,10 +14,10 @@ namespace GymApp.AccesoDatos
         private SqlConnection connection;
         private SqlTransaction transaction;
 
-        // Repositorios que se usarán en conjunto para operaciones transaccionales.
         public IMiembroRepository Miembros { get; private set; }
         public IClaseRepository Clases { get; private set; }
-        // Agregar repositorios para Entrenadores, Reservas y Acceso si es necesario
+        public IReservaRepository Reservas { get; private set; }
+        // Puedes agregar IEntrenadorRepository, IAccesoRepository, etc.
 
         public UnitOfWork()
         {
@@ -24,26 +25,11 @@ namespace GymApp.AccesoDatos
             connection.Open();
             transaction = connection.BeginTransaction();
 
-            // Inicializar repositorios pasando la conexión y la transacción (si se requiere)
-            Miembros = new MiembroRepository(); // Se puede extender para aceptar transacción si el diseño lo requiere
+            // Instanciar repositorios. Si tu diseño soporta pasar la conexión o transacción,
+            // adáptalo para que estos repositorios operen en la misma transacción.
+            Miembros = new MiembroRepository();
             Clases = new ClaseRepository();
-            // Inicializar otros repositorios de forma similar
-        }
-        public void OperacionComplejaReserva(Reserva reserva)
-        {
-            using (UnitOfWork uow = new UnitOfWork())
-            {
-                try
-                {
-                    int nuevaReservaId = uow.Reservas.RegistrarReserva(reserva);
-                    uow.Commit();
-                }
-                catch
-                {
-                    uow.Rollback();
-                    throw;
-                }
-            }
+            Reservas = new ReservaRepository();
         }
 
         public void Commit()

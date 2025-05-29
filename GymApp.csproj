@@ -50,9 +50,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\ClaseRepository.cs" />
     <Compile Include="AccesoDatos\GymConnection.cs" />
+    <Compile Include="AccesoDatos\IClaseRepository.cs" />
+    <Compile Include="AccesoDatos\IMiembroRepository.cs" />
+    <Compile Include="AccesoDatos\IReservaRepository.cs" />
+    <Compile Include="AccesoDatos\MiembroRepository.cs" />
+    <Compile Include="AccesoDatos\ReservaRepository.cs" />
+    <Compile Include="AccesoDatos\UnitOfWork.cs" />
+    <Compile Include="Entidades\Acceso.cs" />
+    <Compile Include="Entidades\Clase.cs" />
+    <Compile Include="Entidades\Entrenador.cs" />
+    <Compile Include="Entidades\Miembro.cs" />
+    <Compile Include="Entidades\Reserva.cs" />
+    <Compile Include="Negocio\MiembroService.cs" />
+    <Compile Include="Negocio\ReservaService.cs" />
+    <Compile Include="Presentacion\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CancelarReservaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CancelarReservaForm.Designer.cs">
+      <DependentUpon>CancelarReservaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MemberDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MemberDashboard.Designer.cs">
+      <DependentUpon>MemberDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MiembrosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MiembrosForm.Designer.cs">
+      <DependentUpon>MiembrosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ReservaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ReservaForm.Designer.cs">
+      <DependentUpon>ReservaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CancelarReservaForm.resx">
+      <DependentUpon>CancelarReservaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MemberDashboard.resx">
+      <DependentUpon>MemberDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MiembrosForm.resx">
+      <DependentUpon>MiembrosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ReservaForm.resx">
+      <DependentUpon>ReservaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,9 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entidades\" />
-    <Folder Include="Negocio\" />
-    <Folder Include="Presentacion\" />
     <Folder Include="Utilidades\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,31 +17,31 @@ namespace GymApp.Presentacion
     {
         private ReservaService reservaService;
         private Miembro currentMiembro;
-        // Para listar clases, podemos usar directamente el repositorio o, idealmente, un servicio de clases.
-        private ClaseRepository claseRepository;
+        private IClaseRepository claseRepository;
 
         public ReservaForm(Miembro miembro)
         {
             InitializeComponent();
             currentMiembro = miembro;
-            // Inicializamos el repositorio y servicio. (En un proyecto real, se emplea inyección de dependencias.)
+            // Inicialización directa para ejemplificar (idealmente, usar inyección de dependencias)
             reservaService = new ReservaService(new ReservaRepository(), new MiembroRepository(), new ClaseRepository());
             claseRepository = new ClaseRepository();
             CargarClasesDisponibles();
-            // Configurar el DateTimePicker (opcionalmente, se puede fijar un formato o valor predeterminado)
+
+            // Configurar el DateTimePicker (por ejemplo, que la fecha mínima sea ahora + 1 hora)
             dtpFechaReserva.Value = DateTime.Now.AddHours(1);
         }
 
-        // Carga las clases disponibles en el ComboBox.
+        // Carga las clases disponibles en el ComboBox
         private void CargarClasesDisponibles()
         {
             try
             {
                 IEnumerable<Clase> clases = claseRepository.ObtenerTodos();
-                // Asumimos que "Clase" tiene las propiedades ClaseID y NombreClase.
+                // Convertir a lista y asignar propiedades del ComboBox
                 cmbClases.DataSource = new List<Clase>(clases);
-                cmbClases.DisplayMember = "NombreClase";
-                cmbClases.ValueMember = "ClaseID";
+                cmbClases.DisplayMember = "NombreClase"; // Se mostrará el nombre de la clase
+                cmbClases.ValueMember = "ClaseID";         // Valor interno: el ID de la clase
             }
             catch (Exception ex)
             {
@@ -49,16 +49,15 @@ namespace GymApp.Presentacion
             }
         }
 
-        // Evento clic del botón Reservar
+        // Evento click del botón "Reservar"
         private void btnReservar_Click(object sender, EventArgs e)
         {
             try
             {
-                // Crear un nuevo objeto Reserva
                 Reserva nuevaReserva = new Reserva();
                 nuevaReserva.UsuarioID = currentMiembro.UsuarioID;
 
-                // Obtener el ID de la clase seleccionada en el ComboBox
+                // Validar que se haya seleccionado una clase
                 if (cmbClases.SelectedItem is Clase selectedClase)
                 {
                     nuevaReserva.ClaseID = selectedClase.ClaseID;
@@ -69,11 +68,10 @@ namespace GymApp.Presentacion
                     return;
                 }
 
-                // Establecer la fecha de la reserva basándose en el DateTimePicker; en un escenario real,
-                // se podría validar esta fecha contra el horario programado de la clase.
+                // Asignar la fecha y hora seleccionadas
                 nuevaReserva.FechaReserva = dtpFechaReserva.Value;
 
-                // Llamar al Servicio de Reserva: esto aplicará todas las validaciones (como vigencia de membresía y cupos disponibles)
+                // Invocar el servicio que registra la reserva; este método realiza las validaciones internas.
                 int nuevaReservaId = reservaService.RegistrarReserva(nuevaReserva);
                 lblMensaje.Text = "Reserva registrada correctamente, ID: " + nuevaReservaId;
                 lblMensaje.ForeColor = System.Drawing.Color.Green;
@@ -84,7 +82,6 @@ namespace GymApp.Presentacion
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
-
         private void ReservaForm_Load(object sender, EventArgs e)
         {
 

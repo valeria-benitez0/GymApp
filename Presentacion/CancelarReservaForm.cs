@@ -41,7 +41,7 @@ namespace GymApp.Presentacion
         }
 
         // Al presionar el botón "Cancelar Reserva"
-        private void btnCancelarReserva_Click(object sender, EventArgs e)
+        private void btnCancelarReserva_Click_1(object sender, EventArgs e)
         {
             // Verificar si hay alguna fila seleccionada en el DataGridView
             if (dgvReservas.SelectedRows.Count == 0)
@@ -70,5 +70,6 @@ namespace GymApp.Presentacion
         {
 
         }
+
     }
 }

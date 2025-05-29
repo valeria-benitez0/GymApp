@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GymApp.Entidades
 {
-    internal class Clase
+    public class Clase
     {
+        public int ClaseID { get; set; }
+        public string NombreClase { get; set; }
+        public DateTime Horario { get; set; }
+        public int Duracion { get; set; }
+        public int CapacidadMaxima { get; set; }
+        public int EntrenadorID { get; set; }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GymApp.Entidades
 {
-    internal class Entrenador
+    public class Entrenador
     {
+        public int EntrenadorID { get; set; }
+        public string Nombre { get; set; }
+        public string Especialidad { get; set; }
+        public string Disponibilidad { get; set; }
     }
 }
