@@ -7,10 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System;
-using System.Linq;
-using System.Windows.Forms;
 using GymApp.Entidades;
 using GymApp.Negocio;
 using GymApp.AccesoDatos;
@@ -107,6 +103,11 @@ namespace GymApp.Presentacion
             CargarMiembros();
         }
         private void MiembrosForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

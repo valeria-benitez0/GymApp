@@ -33,12 +33,6 @@
             this.btnEditarClase = new System.Windows.Forms.Button();
             this.btnNuevaClase = new System.Windows.Forms.Button();
             this.dgvClases = new System.Windows.Forms.DataGridView();
-            this.ClaseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreClase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapacidadMaxima = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreEntrenador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClases)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,49 +79,12 @@
             // dgvClases
             // 
             this.dgvClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClases.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClaseID,
-            this.NombreClase,
-            this.Horario,
-            this.Duracion,
-            this.CapacidadMaxima,
-            this.NombreEntrenador});
             this.dgvClases.Location = new System.Drawing.Point(86, 60);
             this.dgvClases.MultiSelect = false;
             this.dgvClases.Name = "dgvClases";
             this.dgvClases.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClases.Size = new System.Drawing.Size(642, 150);
             this.dgvClases.TabIndex = 5;
-            // 
-            // ClaseID
-            // 
-            this.ClaseID.HeaderText = "ID Clase";
-            this.ClaseID.Name = "ClaseID";
-            // 
-            // NombreClase
-            // 
-            this.NombreClase.HeaderText = "Nombre";
-            this.NombreClase.Name = "NombreClase";
-            // 
-            // Horario
-            // 
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
-            // Duracion
-            // 
-            this.Duracion.HeaderText = "Duración";
-            this.Duracion.Name = "Duracion";
-            // 
-            // CapacidadMaxima
-            // 
-            this.CapacidadMaxima.HeaderText = "Capacidad Máxima";
-            this.CapacidadMaxima.Name = "CapacidadMaxima";
-            // 
-            // NombreEntrenador
-            // 
-            this.NombreEntrenador.HeaderText = "Nombre Entrenador";
-            this.NombreEntrenador.Name = "NombreEntrenador";
             // 
             // ClasesForm
             // 
@@ -154,11 +111,5 @@
         private System.Windows.Forms.Button btnEditarClase;
         private System.Windows.Forms.Button btnNuevaClase;
         private System.Windows.Forms.DataGridView dgvClases;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClaseID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreClase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CapacidadMaxima;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEntrenador;
     }
 }

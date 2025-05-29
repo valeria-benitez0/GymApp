@@ -171,12 +171,15 @@ namespace GymApp.AccesoDatos
             try
             {
                 connection.Open();
-                // Eliminación lógica: se marca el miembro como inactivo.
-                string query = "UPDATE Miembros SET Activo = 0 WHERE UsuarioID = @UsuarioID;";
+                string query = "UPDATE Miembros SET Activo = 0 WHERE UsuarioID = @UsuarioID";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UsuarioID", id);
-                    cmd.ExecuteNonQuery();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected == 0)
+                    {
+                        throw new Exception("No se encontró el miembro para eliminar.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -188,6 +191,8 @@ namespace GymApp.AccesoDatos
                 connection.Close();
             }
         }
+
     }
 }
+
 

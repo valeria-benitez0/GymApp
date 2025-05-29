@@ -33,35 +33,19 @@
             this.btnEditarMiembro = new System.Windows.Forms.Button();
             this.btnEliminarMiembro = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
-            this.UsuarioID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaVencimientoMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMiembros
             // 
             this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMiembros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UsuarioID,
-            this.Nombre,
-            this.Email,
-            this.Telefono,
-            this.TipoMembresia,
-            this.FechaVencimientoMembresia,
-            this.Rol,
-            this.Activo});
             this.dgvMiembros.Location = new System.Drawing.Point(42, 223);
             this.dgvMiembros.MultiSelect = false;
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMiembros.Size = new System.Drawing.Size(683, 174);
             this.dgvMiembros.TabIndex = 0;
+            this.dgvMiembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMiembros_CellContentClick);
             // 
             // btnNuevoMiembro
             // 
@@ -103,54 +87,6 @@
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
-            // UsuarioID
-            // 
-            this.UsuarioID.HeaderText = "ID Usuario";
-            this.UsuarioID.Name = "UsuarioID";
-            this.UsuarioID.Width = 80;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 80;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.Width = 80;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.Width = 80;
-            // 
-            // TipoMembresia
-            // 
-            this.TipoMembresia.HeaderText = "TipoMembresia";
-            this.TipoMembresia.Name = "TipoMembresia";
-            this.TipoMembresia.Width = 80;
-            // 
-            // FechaVencimientoMembresia
-            // 
-            this.FechaVencimientoMembresia.HeaderText = "Vencimiento Membresia\n\n";
-            this.FechaVencimientoMembresia.Name = "FechaVencimientoMembresia";
-            this.FechaVencimientoMembresia.Width = 80;
-            // 
-            // Rol
-            // 
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.Width = 80;
-            // 
-            // Activo
-            // 
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            this.Activo.Width = 80;
-            // 
             // MiembrosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,13 +112,5 @@
         private System.Windows.Forms.Button btnEditarMiembro;
         private System.Windows.Forms.Button btnEliminarMiembro;
         private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMembresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimientoMembresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
     }
 }

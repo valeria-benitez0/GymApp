@@ -33,10 +33,6 @@
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.ReservaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClaseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,36 +75,11 @@
             // dgvReservas
             // 
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ReservaID,
-            this.FechaReserva,
-            this.Estado,
-            this.ClaseID});
             this.dgvReservas.Location = new System.Drawing.Point(136, 133);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReservas.Size = new System.Drawing.Size(436, 150);
             this.dgvReservas.TabIndex = 8;
-            // 
-            // ReservaID
-            // 
-            this.ReservaID.HeaderText = "ID Reserva";
-            this.ReservaID.Name = "ReservaID";
-            // 
-            // FechaReserva
-            // 
-            this.FechaReserva.HeaderText = "Fecha Reserva";
-            this.FechaReserva.Name = "FechaReserva";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // ClaseID
-            // 
-            this.ClaseID.HeaderText = "ID clase";
-            this.ClaseID.Name = "ClaseID";
             // 
             // CancelarReservaForm
             // 
@@ -135,9 +106,5 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnCancelarReserva;
         private System.Windows.Forms.DataGridView dgvReservas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReservaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaReserva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClaseID;
     }
 }

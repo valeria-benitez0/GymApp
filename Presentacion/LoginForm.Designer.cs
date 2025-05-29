@@ -45,6 +45,7 @@
             this.lblMensaje.Size = new System.Drawing.Size(16, 13);
             this.lblMensaje.TabIndex = 20;
             this.lblMensaje.Text = "...";
+            this.lblMensaje.Click += new System.EventHandler(this.lblMensaje_Click);
             // 
             // btnLogin
             // 

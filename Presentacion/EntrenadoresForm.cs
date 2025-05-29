@@ -55,7 +55,7 @@ namespace GymApp.Presentacion
             }
 
             int idEntrenador = Convert.ToInt32(dgvEntrenadores.SelectedRows[0].Cells["EntrenadorID"].Value);
-            Entrenador entrenador = entrenadorService.ObtenerTodosLosEntrenadores().FirstOrDefault(e => e.EntrenadorID == idEntrenador);
+            Entrenador entrenador = entrenadorService.ObtenerTodosLosEntrenadores().FirstOrDefault(x => x.EntrenadorID == idEntrenador);
             if (entrenador != null)
             {
                 EntrenadorNuevoForm editarForm = new EntrenadorNuevoForm(entrenador);

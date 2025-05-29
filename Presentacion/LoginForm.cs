@@ -22,6 +22,7 @@ namespace GymApp.Presentacion
         {
             InitializeComponent();
             miembroService = new MiembroService(new MiembroRepository());
+            this.VisibleChanged += new EventHandler(LoginForm_VisibleChanged);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -84,7 +85,29 @@ namespace GymApp.Presentacion
             return null; 
         }
 
+        private void LoginForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                LimpiarControles();
+            }
+        }
+
+        private void LimpiarControles()
+        {
+            txtEmail.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            lblMensaje.Text = string.Empty;
+        }
+
+
+
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMensaje_Click(object sender, EventArgs e)
         {
 
         }

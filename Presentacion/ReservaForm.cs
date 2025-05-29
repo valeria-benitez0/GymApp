@@ -78,6 +78,12 @@ namespace GymApp.Presentacion
                 lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
+
+        }
+
+        private void ReservaForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
