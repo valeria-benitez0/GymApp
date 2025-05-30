@@ -41,7 +41,7 @@ namespace GymApp.Presentacion
             txtDisponibilidad.Text = entrenador.Disponibilidad;
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -100,5 +100,6 @@ namespace GymApp.Presentacion
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
+
     }
 }

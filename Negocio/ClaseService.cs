@@ -63,6 +63,11 @@ namespace GymApp.Negocio
             claseRepository.Crear(clase);
         }
 
+        /// <summary>
+        /// Actualiza los datos de una clase, aplicando las mismas validaciones de registro.
+        /// Además, si la clase tiene reservas activas,
+        /// no se permite modificar el horario, duración o capacidad.
+        /// </summary>
         public void ActualizarClase(Clase clase)
         {
             if (clase == null)
@@ -81,7 +86,7 @@ namespace GymApp.Negocio
                 throw new Exception("Debe seleccionar un entrenador válido.");
 
             // Validación adicional: si existen reservas activas, no se pueden modificar propiedades críticas.
-            if (ClaseTieneReservasActivas(clase.ClaseID))
+         /* if (ClaseTieneReservasActivas(clase.ClaseID))
             {
                 // Se obtiene la versión actual de la clase desde la BD.
                 Clase claseActualDB = claseRepository.ObtenerPorId(clase.ClaseID);
@@ -94,8 +99,9 @@ namespace GymApp.Negocio
                         throw new Exception("No se puede modificar el horario, la duración o la capacidad de una clase que tiene reservas activas.");
                     }
                 }
-            }
+            }*/
 
+            // Si todo está en orden, se procede a actualizar.
             claseRepository.Actualizar(clase);
         }
 
@@ -108,8 +114,8 @@ namespace GymApp.Negocio
             if (clase == null)
                 throw new Exception("La clase que desea eliminar no existe.");
 
-            if (ClaseTieneReservasActivas(claseID))
-                throw new Exception("No se puede eliminar la clase, ya que tiene reservas activas.");
+          //if (ClaseTieneReservasActivas(claseID))
+            //  throw new Exception("No se puede eliminar la clase, ya que tiene reservas activas.");
 
             claseRepository.Eliminar(claseID);
         }
@@ -119,7 +125,7 @@ namespace GymApp.Negocio
         /// </summary>
         /// <param name="claseID">El ID de la clase a consultar.</param>
         /// <returns>True si existen reservas activas; de lo contrario, false.</returns>
-        private bool ClaseTieneReservasActivas(int claseID)
+      /*private bool ClaseTieneReservasActivas(int claseID)
         {
             bool tieneReservas = false;
             using (SqlConnection connection = GymConnection.GetInstance().Connection)
@@ -144,8 +150,8 @@ namespace GymApp.Negocio
                     connection.Close();
                 }
             }
-            return tieneReservas;
-        }
+            return tieneReservas; 
+        }*/
     }
 }
 

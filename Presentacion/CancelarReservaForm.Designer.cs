@@ -44,6 +44,7 @@
             this.btnRefrescar.TabIndex = 12;
             this.btnRefrescar.Text = "Actualizar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // lblTitulo
             // 
@@ -71,6 +72,7 @@
             this.btnCancelarReserva.TabIndex = 9;
             this.btnCancelarReserva.Text = "Cancelar reserva";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click_1);
             // 
             // dgvReservas
             // 

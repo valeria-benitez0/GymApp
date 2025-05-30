@@ -54,6 +54,7 @@
             this.btnNuevoEntrenador.TabIndex = 1;
             this.btnNuevoEntrenador.Text = "Nuevo Entrenador";
             this.btnNuevoEntrenador.UseVisualStyleBackColor = true;
+            this.btnNuevoEntrenador.Click += new System.EventHandler(this.btnNuevoEntrenador_Click_1);
             // 
             // btnEditarEntrenador
             // 
@@ -63,6 +64,7 @@
             this.btnEditarEntrenador.TabIndex = 2;
             this.btnEditarEntrenador.Text = "Editar Entrenador";
             this.btnEditarEntrenador.UseVisualStyleBackColor = true;
+            this.btnEditarEntrenador.Click += new System.EventHandler(this.btnEditarEntrenador_Click_1);
             // 
             // btnEliminarEntrenador
             // 
@@ -72,6 +74,7 @@
             this.btnEliminarEntrenador.TabIndex = 3;
             this.btnEliminarEntrenador.Text = "Eliminar Entrenador";
             this.btnEliminarEntrenador.UseVisualStyleBackColor = true;
+            this.btnEliminarEntrenador.Click += new System.EventHandler(this.btnEliminarEntrenador_Click_1);
             // 
             // btnRefrescar
             // 
@@ -81,6 +84,7 @@
             this.btnRefrescar.TabIndex = 4;
             this.btnRefrescar.Text = "Actualizar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // EntrenadoresForm
             // 

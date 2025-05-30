@@ -56,9 +56,9 @@ namespace GymApp.Presentacion
             {
                 // Se instancia y muestra el dashboard del Administrador
                 AdminDashboard adminForm = new AdminDashboard(miembro);
-                this.Hide(); // Se oculta el LoginForm
-                adminForm.ShowDialog(); // Se muestra el dashboard de forma modal
-                this.Show(); // Se vuelve a mostrar al cerrar el dashboard
+                this.Hide();
+                adminForm.ShowDialog();
+                this.Show();
             }
             else if (string.Equals(miembro.Rol, "Miembro", StringComparison.OrdinalIgnoreCase))
             {

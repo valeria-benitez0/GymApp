@@ -58,20 +58,25 @@ namespace GymApp.Presentacion
         {
             if (dgvClases.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione una clase para editar.", "Advertencia",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione una clase para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             int idClase = Convert.ToInt32(dgvClases.SelectedRows[0].Cells["ClaseID"].Value);
+
             Clase clase = claseService.ObtenerTodasLasClases().FirstOrDefault(c => c.ClaseID == idClase);
+
             if (clase != null)
             {
+                // Enviamos el objeto completo al formulario de edición.
                 ClaseNuevoForm editarForm = new ClaseNuevoForm(clase);
                 editarForm.ShowDialog();
-                CargarClases();
+                CargarClases();  
             }
         }
+
+        
+
 
         /// <summary>
         /// Elimina la clase seleccionada, tras una confirmación.

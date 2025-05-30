@@ -38,14 +38,14 @@ namespace GymApp.Presentacion
             }
         }
 
-        private void btnNuevoEntrenador_Click(object sender, EventArgs e)
+        private void btnNuevoEntrenador_Click_1(object sender, EventArgs e)
         {
             EntrenadorNuevoForm nuevoForm = new EntrenadorNuevoForm();
             nuevoForm.ShowDialog();
             CargarEntrenadores();
         }
 
-        private void btnEditarEntrenador_Click(object sender, EventArgs e)
+        private void btnEditarEntrenador_Click_1(object sender, EventArgs e)
         {
             if (dgvEntrenadores.SelectedRows.Count == 0)
             {
@@ -64,7 +64,7 @@ namespace GymApp.Presentacion
             }
         }
 
-        private void btnEliminarEntrenador_Click(object sender, EventArgs e)
+        private void btnEliminarEntrenador_Click_1(object sender, EventArgs e)
         {
             if (dgvEntrenadores.SelectedRows.Count == 0)
             {
@@ -90,7 +90,7 @@ namespace GymApp.Presentacion
             }
         }
 
-        private void btnRefrescar_Click(object sender, EventArgs e)
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
             CargarEntrenadores();
         }
