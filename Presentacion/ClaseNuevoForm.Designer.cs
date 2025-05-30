@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtNombreClase = new System.Windows.Forms.TextBox();
             this.lblNombreClase = new System.Windows.Forms.Label();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblDuracion = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.lblMensaje = new System.Windows.Forms.Label();
             this.lblCapacida = new System.Windows.Forms.Label();
             this.numCapacidad = new System.Windows.Forms.NumericUpDown();
+            this.cmbNombreClase = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacidad)).BeginInit();
             this.SuspendLayout();
@@ -53,13 +53,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(67, 13);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Nueva clase";
-            // 
-            // txtNombreClase
-            // 
-            this.txtNombreClase.Location = new System.Drawing.Point(208, 120);
-            this.txtNombreClase.Name = "txtNombreClase";
-            this.txtNombreClase.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreClase.TabIndex = 1;
             // 
             // lblNombreClase
             // 
@@ -154,11 +147,24 @@
             this.numCapacidad.Size = new System.Drawing.Size(120, 20);
             this.numCapacidad.TabIndex = 13;
             // 
+            // cmbNombreClase
+            // 
+            this.cmbNombreClase.FormattingEnabled = true;
+            this.cmbNombreClase.Items.AddRange(new object[] {
+            "Yoga",
+            "Pilates",
+            "Spinning"});
+            this.cmbNombreClase.Location = new System.Drawing.Point(208, 115);
+            this.cmbNombreClase.Name = "cmbNombreClase";
+            this.cmbNombreClase.Size = new System.Drawing.Size(121, 21);
+            this.cmbNombreClase.TabIndex = 14;
+            // 
             // ClaseNuevoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbNombreClase);
             this.Controls.Add(this.numCapacidad);
             this.Controls.Add(this.lblCapacida);
             this.Controls.Add(this.lblMensaje);
@@ -170,7 +176,6 @@
             this.Controls.Add(this.lblDuracion);
             this.Controls.Add(this.lblHorario);
             this.Controls.Add(this.lblNombreClase);
-            this.Controls.Add(this.txtNombreClase);
             this.Controls.Add(this.lblTitulo);
             this.Name = "ClaseNuevoForm";
             this.Text = "ClaseNuevoForm";
@@ -184,7 +189,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtNombreClase;
         private System.Windows.Forms.Label lblNombreClase;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblDuracion;
@@ -196,5 +200,6 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Label lblCapacida;
         private System.Windows.Forms.NumericUpDown numCapacidad;
+        private System.Windows.Forms.ComboBox cmbNombreClase;
     }
 }

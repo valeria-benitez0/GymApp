@@ -65,7 +65,7 @@ namespace GymApp.Presentacion
                 var entrenadorService = new EntrenadorService(new EntrenadorRepository());
                 var entrenadores = entrenadorService.ObtenerTodosLosEntrenadores();
                 cmbEntrenador.DataSource = entrenadores.ToList();
-                cmbEntrenador.DisplayMember = "Nombre";      // Muestra el nombre del entrenador
+                cmbEntrenador.DisplayMember = "Nombre";
                 cmbEntrenador.ValueMember = "EntrenadorID";    // Usa el ID para guardar
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace GymApp.Presentacion
         /// </summary>
         private void CargarDatosClase(Clase clase)
         {
-            txtNombreClase.Text = clase.NombreClase;
+            cmbNombreClase.Text = clase.NombreClase;
             dtpHorario.Value = clase.Horario;
             numDuracion.Value = clase.Duracion;
             numCapacidad.Value = clase.CapacidadMaxima;
@@ -94,7 +94,7 @@ namespace GymApp.Presentacion
             try
             {
                 // Validación básica: el nombre es obligatorio.
-                if (string.IsNullOrWhiteSpace(txtNombreClase.Text))
+                if (string.IsNullOrWhiteSpace(cmbNombreClase.Text))
                 {
                     lblMensaje.Text = "El nombre de la clase es obligatorio.";
                     lblMensaje.ForeColor = System.Drawing.Color.Red;
@@ -106,7 +106,7 @@ namespace GymApp.Presentacion
                     // Crear una nueva clase.
                     Clase nuevaClase = new Clase
                     {
-                        NombreClase = txtNombreClase.Text.Trim(),
+                        NombreClase = cmbNombreClase.Text.Trim(),
                         Horario = dtpHorario.Value,
                         Duracion = (int)numDuracion.Value,
                         CapacidadMaxima = (int)numCapacidad.Value,
@@ -120,7 +120,7 @@ namespace GymApp.Presentacion
                 else
                 {
                     // Actualizar la clase existente.
-                    claseActual.NombreClase = txtNombreClase.Text.Trim();
+                    claseActual.NombreClase = cmbNombreClase.Text.Trim();
                     claseActual.Horario = dtpHorario.Value;
                     claseActual.Duracion = (int)numDuracion.Value;
                     claseActual.CapacidadMaxima = (int)numCapacidad.Value;
@@ -139,6 +139,11 @@ namespace GymApp.Presentacion
                 lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
+        }
+
+        private void txtNombreClase_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

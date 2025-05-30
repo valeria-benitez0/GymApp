@@ -464,3 +464,8 @@ BEGIN
 END
 GO
 
+INSERT INTO Miembros 
+   (Nombre, Email, Telefono, TipoMembresia, FechaVencimientoMembresia, Rol, Activo, Password)
+VALUES 
+   ('Administrador', 'admin@email.com', '3001234567', 
+    'Premium', DATEADD(year, 1, GETDATE()), 'Administrador', 1, '123');
