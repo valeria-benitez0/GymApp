@@ -1,6 +1,6 @@
 ﻿namespace GymApp.Presentacion
 {
-    partial class ReservaForm
+    partial class ens
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,6 @@
             this.btnRegistrarReserva = new System.Windows.Forms.Button();
             this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
             this.cmbClases = new System.Windows.Forms.ComboBox();
-            this.lblUsuarioID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,14 +46,14 @@
             this.txtUsuarioID.Location = new System.Drawing.Point(276, 79);
             this.txtUsuarioID.Name = "txtUsuarioID";
             this.txtUsuarioID.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuarioID.TabIndex = 43;
+            this.txtUsuarioID.TabIndex = 33;
             // 
             // btnCancelarReserva
             // 
             this.btnCancelarReserva.Location = new System.Drawing.Point(276, 300);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarReserva.TabIndex = 42;
+            this.btnCancelarReserva.TabIndex = 32;
             this.btnCancelarReserva.Text = "Cancelar";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
             // 
@@ -64,7 +63,7 @@
             this.dgvReservas.Location = new System.Drawing.Point(417, 260);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.Size = new System.Drawing.Size(240, 150);
-            this.dgvReservas.TabIndex = 41;
+            this.dgvReservas.TabIndex = 31;
             // 
             // lblFechaReserva
             // 
@@ -72,7 +71,7 @@
             this.lblFechaReserva.Location = new System.Drawing.Point(143, 187);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(129, 13);
-            this.lblFechaReserva.TabIndex = 40;
+            this.lblFechaReserva.TabIndex = 30;
             this.lblFechaReserva.Text = "Fecha y Hora de Reserva";
             // 
             // lblClases
@@ -81,7 +80,7 @@
             this.lblClases.Location = new System.Drawing.Point(143, 137);
             this.lblClases.Name = "lblClases";
             this.lblClases.Size = new System.Drawing.Size(99, 13);
-            this.lblClases.TabIndex = 39;
+            this.lblClases.TabIndex = 29;
             this.lblClases.Text = "Seleccione la clase";
             // 
             // lblTitulo
@@ -90,7 +89,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(276, 41);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(83, 13);
-            this.lblTitulo.TabIndex = 38;
+            this.lblTitulo.TabIndex = 28;
             this.lblTitulo.Text = "Realizar reserva";
             // 
             // lblMensaje
@@ -99,7 +98,7 @@
             this.lblMensaje.Location = new System.Drawing.Point(276, 356);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(16, 13);
-            this.lblMensaje.TabIndex = 37;
+            this.lblMensaje.TabIndex = 27;
             this.lblMensaje.Text = "...";
             // 
             // btnRegistrarReserva
@@ -107,7 +106,7 @@
             this.btnRegistrarReserva.Location = new System.Drawing.Point(279, 260);
             this.btnRegistrarReserva.Name = "btnRegistrarReserva";
             this.btnRegistrarReserva.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrarReserva.TabIndex = 36;
+            this.btnRegistrarReserva.TabIndex = 26;
             this.btnRegistrarReserva.Text = "Reservar";
             this.btnRegistrarReserva.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +115,7 @@
             this.dtpFechaReserva.Location = new System.Drawing.Point(288, 187);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
             this.dtpFechaReserva.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaReserva.TabIndex = 35;
+            this.dtpFechaReserva.TabIndex = 25;
             // 
             // cmbClases
             // 
@@ -124,23 +123,13 @@
             this.cmbClases.Location = new System.Drawing.Point(276, 129);
             this.cmbClases.Name = "cmbClases";
             this.cmbClases.Size = new System.Drawing.Size(121, 21);
-            this.cmbClases.TabIndex = 34;
+            this.cmbClases.TabIndex = 24;
             // 
-            // lblUsuarioID
-            // 
-            this.lblUsuarioID.AutoSize = true;
-            this.lblUsuarioID.Location = new System.Drawing.Point(143, 79);
-            this.lblUsuarioID.Name = "lblUsuarioID";
-            this.lblUsuarioID.Size = new System.Drawing.Size(99, 13);
-            this.lblUsuarioID.TabIndex = 44;
-            this.lblUsuarioID.Text = "Seleccione la clase";
-            // 
-            // ReservaForm
+            // ens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblUsuarioID);
             this.Controls.Add(this.txtUsuarioID);
             this.Controls.Add(this.btnCancelarReserva);
             this.Controls.Add(this.dgvReservas);
@@ -151,8 +140,8 @@
             this.Controls.Add(this.btnRegistrarReserva);
             this.Controls.Add(this.dtpFechaReserva);
             this.Controls.Add(this.cmbClases);
-            this.Name = "ReservaForm";
-            this.Text = "ReservaForm";
+            this.Name = "ens";
+            this.Text = "ens";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,6 +160,5 @@
         private System.Windows.Forms.Button btnRegistrarReserva;
         private System.Windows.Forms.DateTimePicker dtpFechaReserva;
         private System.Windows.Forms.ComboBox cmbClases;
-        private System.Windows.Forms.Label lblUsuarioID;
     }
 }

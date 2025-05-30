@@ -101,7 +101,6 @@ namespace GymApp.Negocio
                 }
             }*/
 
-            // Si todo está en orden, se procede a actualizar.
             claseRepository.Actualizar(clase);
         }
 

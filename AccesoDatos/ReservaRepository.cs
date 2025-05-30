@@ -10,19 +10,14 @@ namespace GymApp.AccesoDatos
 {
     public class ReservaRepository : IReservaRepository
     {
-        private SqlConnection connection;
-
-        public ReservaRepository()
-        {
-            connection = GymConnection.GetInstance().Connection;
-        }
-
         public int RegistrarReserva(Reserva reserva)
         {
             int newId = 0;
+            SqlConnection connection = GymConnection.GetInstance().Connection;
             try
             {
                 connection.Open();
+                // Se utiliza el SP SP_RegistrarReserva
                 string query = "EXEC SP_RegistrarReserva @UsuarioID, @ClaseID, @FechaReserva";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
@@ -46,9 +41,11 @@ namespace GymApp.AccesoDatos
 
         public void CancelarReserva(int reservaId)
         {
+            SqlConnection connection = GymConnection.GetInstance().Connection;
             try
             {
                 connection.Open();
+                // Se utiliza el SP SP_CancelarReserva
                 string query = "EXEC SP_CancelarReserva @ReservaID";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
@@ -69,6 +66,7 @@ namespace GymApp.AccesoDatos
         public Reserva ObtenerPorId(int reservaId)
         {
             Reserva reserva = null;
+            SqlConnection connection = GymConnection.GetInstance().Connection;
             try
             {
                 connection.Open();
@@ -87,7 +85,9 @@ namespace GymApp.AccesoDatos
                                 ClaseID = Convert.ToInt32(reader["ClaseID"]),
                                 FechaReserva = Convert.ToDateTime(reader["FechaReserva"]),
                                 Estado = reader["Estado"].ToString(),
-                                FechaCancelacion = reader["FechaCancelacion"] != DBNull.Value ? Convert.ToDateTime(reader["FechaCancelacion"]) : (DateTime?)null
+                                FechaCancelacion = reader["FechaCancelacion"] != DBNull.Value
+                                                    ? Convert.ToDateTime(reader["FechaCancelacion"])
+                                                    : (DateTime?)null
                             };
                         }
                     }
@@ -107,6 +107,7 @@ namespace GymApp.AccesoDatos
         public int ContarReservasActivasPorClase(int claseId)
         {
             int count = 0;
+            SqlConnection connection = GymConnection.GetInstance().Connection;
             try
             {
                 connection.Open();
@@ -131,6 +132,7 @@ namespace GymApp.AccesoDatos
         public IEnumerable<Reserva> ObtenerReservasPorMiembro(int usuarioId)
         {
             List<Reserva> reservas = new List<Reserva>();
+            SqlConnection connection = GymConnection.GetInstance().Connection;
             try
             {
                 connection.Open();
@@ -149,7 +151,9 @@ namespace GymApp.AccesoDatos
                                 ClaseID = Convert.ToInt32(reader["ClaseID"]),
                                 FechaReserva = Convert.ToDateTime(reader["FechaReserva"]),
                                 Estado = reader["Estado"].ToString(),
-                                FechaCancelacion = reader["FechaCancelacion"] != DBNull.Value ? Convert.ToDateTime(reader["FechaCancelacion"]) : (DateTime?)null
+                                FechaCancelacion = reader["FechaCancelacion"] != DBNull.Value
+                                                    ? Convert.ToDateTime(reader["FechaCancelacion"])
+                                                    : (DateTime?)null
                             };
                             reservas.Add(reserva);
                         }

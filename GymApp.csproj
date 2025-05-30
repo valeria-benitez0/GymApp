@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\AccesoRepository.cs" />
     <Compile Include="AccesoDatos\ClaseRepository.cs" />
     <Compile Include="AccesoDatos\EntrenadorRepository.cs" />
     <Compile Include="AccesoDatos\GymConnection.cs" />
+    <Compile Include="AccesoDatos\IAccesoRepository.cs" />
     <Compile Include="AccesoDatos\IClaseRepository.cs" />
     <Compile Include="AccesoDatos\IEntrenadorRepository.cs" />
     <Compile Include="AccesoDatos\IMiembroRepository.cs" />
@@ -65,10 +67,18 @@
     <Compile Include="Entidades\Entrenador.cs" />
     <Compile Include="Entidades\Miembro.cs" />
     <Compile Include="Entidades\Reserva.cs" />
+    <Compile Include="Factories\ReporteFactory.cs" />
+    <Compile Include="Negocio\AccesoService.cs" />
     <Compile Include="Negocio\ClaseService.cs" />
     <Compile Include="Negocio\EntrenadorService.cs" />
     <Compile Include="Negocio\MiembroService.cs" />
     <Compile Include="Negocio\ReservaService.cs" />
+    <Compile Include="Presentacion\AccesoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AccesoForm.Designer.cs">
+      <DependentUpon>AccesoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +102,12 @@
     </Compile>
     <Compile Include="Presentacion\ClasesForm.Designer.cs">
       <DependentUpon>ClasesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ens.Designer.cs">
+      <DependentUpon>ens.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\EntrenadoresForm.cs">
       <SubType>Form</SubType>
@@ -123,6 +139,12 @@
     <Compile Include="Presentacion\MiembroNuevoForm.Designer.cs">
       <DependentUpon>MiembroNuevoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\MiembroNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MiembroNuevoUsuario.Designer.cs">
+      <DependentUpon>MiembroNuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\MiembrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +165,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AccesoForm.resx">
+      <DependentUpon>AccesoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ClasesForm.resx">
       <DependentUpon>ClasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ens.resx">
+      <DependentUpon>ens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\EntrenadoresForm.resx">
       <DependentUpon>EntrenadoresForm.cs</DependentUpon>
@@ -170,8 +198,14 @@
     <EmbeddedResource Include="Presentacion\MiembroNuevoForm.resx">
       <DependentUpon>MiembroNuevoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MiembroNuevoUsuario.resx">
+      <DependentUpon>MiembroNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\MiembrosForm.resx">
       <DependentUpon>MiembrosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ReportesForm.resx">
+      <DependentUpon>ReportesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ReservaForm.resx">
       <DependentUpon>ReservaForm.cs</DependentUpon>
@@ -199,8 +233,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

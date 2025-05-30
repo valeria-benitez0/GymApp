@@ -57,14 +57,13 @@ namespace GymApp.Presentacion
 
         private void btnVerClases_Click_1(object sender, EventArgs e)
         {
-        // Abre un formulario que muestre las clases disponibles
         ReservaForm reservaForm = new ReservaForm(usuarioActual);
             reservaForm.ShowDialog();
         }
 
         private void btnReservar_Click_1(object sender, EventArgs e)
         {
-        // Se abre el formulario de reserva para que el usuario registre una nueva reserva.
+            // Se abre el formulario de reserva para que el usuario registre una nueva reserva.
         ReservaForm reservaForm = new ReservaForm(usuarioActual);
             reservaForm.ShowDialog();
 

@@ -64,6 +64,7 @@
             this.btnRegistrarAcceso.TabIndex = 7;
             this.btnRegistrarAcceso.Text = "Acceso";
             this.btnRegistrarAcceso.UseVisualStyleBackColor = true;
+            this.btnRegistrarAcceso.Click += new System.EventHandler(this.btnRegistrarAcceso_Click_1);
             // 
             // AccesoForm
             // 

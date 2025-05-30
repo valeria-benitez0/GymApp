@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GymApp.Entidades;
 
 namespace GymApp.AccesoDatos
 {
-    internal class IAccesoRepository
+    public interface IAccesoRepository
     {
+        int InsertarAcceso(Acceso acceso);
+        IEnumerable<ReporteAsistenciaDTO> GenerarReporteAsistencia(DateTime fechaInicio, DateTime fechaFin);
+        IEnumerable<NotificacionReservaDTO> ObtenerNotificacionesReservasPendientes();
     }
 }

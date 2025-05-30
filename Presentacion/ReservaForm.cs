@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GymApp.Entidades;
 using GymApp.Negocio;
@@ -16,74 +11,119 @@ namespace GymApp.Presentacion
     public partial class ReservaForm : Form
     {
         private ReservaService reservaService;
-        private ClaseService claseService;
-        private Miembro currentMiembro;
+        private Miembro usuarioActual;
 
-        public ReservaForm(Miembro miembro)
+        // Constructor principal (sin parámetros) que inicializa los servicios
+        public ReservaForm() : this(
+            new ReservaService(
+                new ReservaRepository(),
+                new MiembroRepository(),
+                new ClaseRepository()))
         {
-            InitializeComponent();
-            currentMiembro = miembro;
-            reservaService = new ReservaService(new ReservaRepository(),
-                                                new MiembroRepository(),
-                                                new ClaseRepository());
-            claseService = new ClaseService(new ClaseRepository());
-            CargarClasesDisponibles();
-
-            dtpFechaReserva.MinDate = DateTime.Now.AddMinutes(30);
         }
 
-        private void CargarClasesDisponibles()
+        // Constructor para inyección de dependencias
+        public ReservaForm(ReservaService servicio)
+        {
+            InitializeComponent();
+            this.reservaService = servicio;
+            CargarClases();
+        }
+
+        // NUEVO: Constructor que recibe un Miembro
+        public ReservaForm(Miembro miembroActual) : this()
+        {
+            this.usuarioActual = miembroActual;
+            txtUsuarioID.Text = usuarioActual.UsuarioID.ToString(); // Prellenar campo
+            txtUsuarioID.Visible = false; // Ocultar si ya no es necesario
+            lblUsuarioID.Visible = false; // Si tienes un label asociado, también ocultarlo
+        }
+
+        private void CargarClases()
         {
             try
             {
-                // Obtenemos todas las clases; se podrían filtrar por disponibilidad.
-                var clases = claseService.ObtenerTodasLasClases();
-                cmbClases.DataSource = clases.ToList();
+                IClaseRepository claseRepo = new ClaseRepository();
+                var listaClases = claseRepo.ObtenerTodos().ToList();
+                cmbClases.DataSource = listaClases;
                 cmbClases.DisplayMember = "NombreClase";
                 cmbClases.ValueMember = "ClaseID";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar clases: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar las clases: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnReservar_Click(object sender, EventArgs e)
+        private void btnRegistrarReserva_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (cmbClases.SelectedItem == null)
+                // Se usa el UsuarioID del miembro logueado
+                int usuarioId = usuarioActual.UsuarioID;
+                int claseId = Convert.ToInt32(cmbClases.SelectedValue);
+                DateTime fechaReserva = dtpFechaReserva.Value;
+
+                Reserva nuevaReserva = new Reserva
                 {
-                    lblMensaje.Text = "Seleccione una clase.";
-                    lblMensaje.ForeColor = System.Drawing.Color.Red;
-                    return;
-                }
+                    UsuarioID = usuarioId,
+                    ClaseID = claseId,
+                    FechaReserva = fechaReserva,
+                    Estado = "Activa"
+                };
 
-                // Se crea un objeto Reserva y se asigna la información.
-                Reserva nuevaReserva = new Reserva();
-                nuevaReserva.UsuarioID = currentMiembro.UsuarioID;
-                nuevaReserva.ClaseID = (int)cmbClases.SelectedValue;
-                // Se utiliza el valor del DateTimePicker.
-                nuevaReserva.FechaReserva = dtpFechaReserva.Value;
-
-                // Registrar la reserva (se realizan las validaciones internas en el service).
                 int nuevoId = reservaService.RegistrarReserva(nuevaReserva);
+                MessageBox.Show("Reserva registrada correctamente. ID: " + nuevoId,
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                lblMensaje.Text = "Reserva registrada exitosamente. ID: " + nuevoId;
-                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                CargarReservas();
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "Error: " + ex.Message;
-                lblMensaje.ForeColor = System.Drawing.Color.Red;
+                MessageBox.Show("Error al registrar reserva: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void ReservaForm_Load(object sender, EventArgs e)
+        private void CargarReservas()
         {
+            try
+            {
+                int usuarioId = usuarioActual.UsuarioID;
+                var reservas = reservaService.ObtenerReservasPorMiembro(usuarioId).ToList();
+                dgvReservas.DataSource = reservas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar las reservas: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void btnCancelarReserva_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvReservas.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Selecciona una reserva para cancelar.",
+                        "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int reservaId = Convert.ToInt32(dgvReservas.SelectedRows[0].Cells["ReservaID"].Value);
+                reservaService.CancelarReserva(reservaId);
+                MessageBox.Show("Reserva cancelada correctamente.",
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                CargarReservas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cancelar la reserva: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

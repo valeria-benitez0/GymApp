@@ -35,6 +35,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnRegistro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMensaje
@@ -100,6 +101,16 @@
             this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "Iniciar Sesión";
             // 
+            // btnRegistro
+            // 
+            this.btnRegistro.Location = new System.Drawing.Point(269, 311);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistro.TabIndex = 21;
+            this.btnRegistro.Text = "Registrarse";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +123,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.btnRegistro);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }

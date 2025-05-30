@@ -43,7 +43,7 @@ namespace GymApp.Presentacion
 
         private void btnGestionarReservas_Click_1(object sender, EventArgs e)
         {
-            CancelarReservaForm reservasForm = new CancelarReservaForm(usuarioActual);
+            ReservaForm reservasForm = new ReservaForm(usuarioActual);
             reservasForm.ShowDialog();
         }
 

@@ -111,5 +111,14 @@ namespace GymApp.Presentacion
         {
 
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            MiembroNuevoUsuario nuevoForm = new MiembroNuevoUsuario();
+
+            this.Hide();
+            nuevoForm.ShowDialog();
+            this.Show();
+        }
     }
 }

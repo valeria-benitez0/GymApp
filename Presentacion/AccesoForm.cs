@@ -26,7 +26,7 @@ namespace GymApp.Presentacion
         }
 
         // Evento para registrar un acceso.
-        private void btnRegistrarAcceso_Click(object sender, EventArgs e)
+        private void btnRegistrarAcceso_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -61,5 +61,6 @@ namespace GymApp.Presentacion
                 MessageBox.Show("Error registrando acceso: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

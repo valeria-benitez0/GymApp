@@ -4,7 +4,6 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\Gym
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.LoginForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MemberDashboard.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MiembrosForm.resources
-C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ReservaForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Properties.Resources.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.csproj.GenerateResource.cache
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.csproj.CoreCompileInputs.cache
@@ -21,3 +20,8 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\Gym
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ClaseNuevoForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.EntrenadoresForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.EntrenadorNuevoForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.AccesoForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ReportesForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ens.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ReservaForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MiembroNuevoUsuario.resources
