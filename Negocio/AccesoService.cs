@@ -22,7 +22,6 @@ namespace GymApp.Negocio
         {
             if (acceso == null)
                 throw new ArgumentNullException(nameof(acceso));
-            // Aquí podrías incluir validaciones adicionales, si es necesario.
             return accesoRepo.InsertarAcceso(acceso);
         }
 
