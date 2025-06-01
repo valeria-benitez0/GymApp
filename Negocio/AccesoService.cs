@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GymApp.AccesoDatos;
 using GymApp.Entidades;
 using GymApp.Factories;
@@ -22,18 +20,38 @@ namespace GymApp.Negocio
         {
             if (acceso == null)
                 throw new ArgumentNullException(nameof(acceso));
+
             return accesoRepo.InsertarAcceso(acceso);
         }
 
         public IEnumerable<ReporteAsistenciaDTO> ObtenerReporteAsistencia(DateTime fechaInicio, DateTime fechaFin)
         {
-            // Se utiliza la Factory para crear el reporte
             return ReporteFactory.CrearReporteAsistencia(fechaInicio, fechaFin, accesoRepo);
         }
 
         public IEnumerable<NotificacionReservaDTO> ObtenerNotificacionesPendientes()
         {
             return NotificacionFactory.CrearNotificaciones(accesoRepo);
+        }
+
+        public IEnumerable<Acceso> ObtenerAccesosPorUsuario(int usuarioId)
+        {
+            return accesoRepo.ObtenerAccesosPorUsuario(usuarioId);
+        }
+
+        public IEnumerable<Acceso> ObtenerAccesosPorClase(int claseId)
+        {
+            return accesoRepo.ObtenerAccesosPorClase(claseId);
+        }
+
+        public IEnumerable<Acceso> ObtenerAccesosPorClaseYFecha(int claseId, DateTime desde, DateTime hasta)
+        {
+            return accesoRepo.ObtenerAccesosPorClaseYFecha(claseId, desde, hasta);
+        }
+
+        public IEnumerable<Acceso> ObtenerTodos()
+        {
+            return accesoRepo.ObtenerTodos();
         }
     }
 }
