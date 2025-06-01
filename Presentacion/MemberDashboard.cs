@@ -92,5 +92,11 @@ namespace GymApp.Presentacion
         {
 
         }
+
+        private void btnVerMisReservas_Click(object sender, EventArgs e)
+        {
+            MiReservasForm MiReservaForm = new MiReservasForm(usuarioActual);
+            MiReservaForm.ShowDialog();
+        }
     }
 }

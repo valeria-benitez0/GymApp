@@ -90,7 +90,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(150, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(232, 20);
+            this.txtNombre.Size = new System.Drawing.Size(304, 20);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -107,7 +107,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(150, 34);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(232, 20);
+            this.txtEmail.Size = new System.Drawing.Size(304, 20);
             this.txtEmail.TabIndex = 4;
             // 
             // lblTelefono
@@ -123,7 +123,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(150, 65);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(232, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(304, 20);
             this.txtTelefono.TabIndex = 6;
             // 
             // lblTipoMembresia
@@ -140,7 +140,7 @@
             this.cmbTipoMembresia.FormattingEnabled = true;
             this.cmbTipoMembresia.Location = new System.Drawing.Point(150, 96);
             this.cmbTipoMembresia.Name = "cmbTipoMembresia";
-            this.cmbTipoMembresia.Size = new System.Drawing.Size(232, 20);
+            this.cmbTipoMembresia.Size = new System.Drawing.Size(304, 20);
             this.cmbTipoMembresia.TabIndex = 8;
             // 
             // lblFechaVencimiento
@@ -156,7 +156,7 @@
             // 
             this.dtpFechaVencimiento.Location = new System.Drawing.Point(150, 127);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(232, 20);
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(304, 20);
             this.dtpFechaVencimiento.TabIndex = 10;
             // 
             // lblRol
@@ -173,7 +173,7 @@
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(150, 158);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(232, 20);
+            this.cmbRol.Size = new System.Drawing.Size(304, 20);
             this.cmbRol.TabIndex = 12;
             // 
             // lblPassword
@@ -189,7 +189,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(150, 189);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(232, 20);
+            this.txtPassword.Size = new System.Drawing.Size(304, 20);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -218,11 +218,11 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(769, 416);
+            this.lblMensaje.Location = new System.Drawing.Point(3, 217);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(16, 13);
+            this.lblMensaje.Size = new System.Drawing.Size(8, 12);
             this.lblMensaje.TabIndex = 17;
-            this.lblMensaje.Text = "...";
+            this.lblMensaje.Text = ".";
             // 
             // panel3
             // 
@@ -305,11 +305,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(3, 248);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(14, 12);
+            this.label10.Size = new System.Drawing.Size(8, 12);
             this.label10.TabIndex = 39;
-            this.label10.Text = "...";
+            this.label10.Text = ".";
             // 
             // tableLayoutPanel1
             // 
@@ -320,6 +321,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblNombre, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblRol, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnGuardar, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.chkActivo, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 1, 6);
@@ -332,7 +334,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTelefono, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lblMensaje, 0, 7);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(180, 150);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -358,7 +360,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblMensaje);
             this.Name = "MiembroNuevoForm";
             this.Text = "MiembroNuevoForm";
             this.Load += new System.EventHandler(this.MiembroNuevoForm_Load);
@@ -369,7 +370,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

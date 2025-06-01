@@ -65,10 +65,11 @@
             // lblInfoMiembro
             // 
             this.lblInfoMiembro.AutoSize = true;
+            this.lblInfoMiembro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoMiembro.ForeColor = System.Drawing.Color.White;
             this.lblInfoMiembro.Location = new System.Drawing.Point(3, 0);
             this.lblInfoMiembro.Name = "lblInfoMiembro";
-            this.lblInfoMiembro.Size = new System.Drawing.Size(10, 13);
+            this.lblInfoMiembro.Size = new System.Drawing.Size(11, 14);
             this.lblInfoMiembro.TabIndex = 11;
             this.lblInfoMiembro.Text = ".";
             // 
@@ -144,8 +145,9 @@
             this.btnVerMisReservas.Name = "btnVerMisReservas";
             this.btnVerMisReservas.Size = new System.Drawing.Size(228, 36);
             this.btnVerMisReservas.TabIndex = 15;
-            this.btnVerMisReservas.Text = "Cancelar reserva";
+            this.btnVerMisReservas.Text = "Ver mis reservas";
             this.btnVerMisReservas.UseVisualStyleBackColor = false;
+            this.btnVerMisReservas.Click += new System.EventHandler(this.btnVerMisReservas_Click);
             // 
             // btnMisReportes
             // 
@@ -161,7 +163,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 10);
             this.panel2.TabIndex = 51;
@@ -176,7 +178,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(41, 116);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(444, 256);
+            this.panel1.Size = new System.Drawing.Size(444, 243);
             this.panel1.TabIndex = 52;
             // 
             // label3
@@ -184,7 +186,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(148, 217);
+            this.label3.Location = new System.Drawing.Point(148, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 26);
             this.label3.TabIndex = 51;
@@ -196,7 +198,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 190);
+            this.label2.Location = new System.Drawing.Point(18, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(306, 27);
             this.label2.TabIndex = 50;
@@ -205,9 +207,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(128, -16);
+            this.pictureBox1.Location = new System.Drawing.Point(151, -17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 223);
+            this.pictureBox1.Size = new System.Drawing.Size(290, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
@@ -319,9 +321,9 @@
             // dgvReservas
             // 
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(0, 404);
+            this.dgvReservas.Location = new System.Drawing.Point(0, 378);
             this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(570, 45);
+            this.dgvReservas.Size = new System.Drawing.Size(570, 71);
             this.dgvReservas.TabIndex = 10;
             // 
             // MemberDashboard

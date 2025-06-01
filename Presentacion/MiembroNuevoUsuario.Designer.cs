@@ -47,13 +47,13 @@
             this.lblTitulod = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,7 +98,7 @@
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(150, 158);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(258, 20);
+            this.cmbRol.Size = new System.Drawing.Size(304, 20);
             this.cmbRol.TabIndex = 30;
             // 
             // lblRol
@@ -114,7 +114,7 @@
             // 
             this.dtpFechaVencimiento.Location = new System.Drawing.Point(150, 127);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(258, 20);
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(304, 20);
             this.dtpFechaVencimiento.TabIndex = 28;
             // 
             // lblFechaVencimiento
@@ -131,7 +131,7 @@
             this.cmbTipoMembresia.FormattingEnabled = true;
             this.cmbTipoMembresia.Location = new System.Drawing.Point(150, 96);
             this.cmbTipoMembresia.Name = "cmbTipoMembresia";
-            this.cmbTipoMembresia.Size = new System.Drawing.Size(258, 20);
+            this.cmbTipoMembresia.Size = new System.Drawing.Size(304, 20);
             this.cmbTipoMembresia.TabIndex = 26;
             // 
             // lblTipoMembresia
@@ -147,7 +147,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(150, 65);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(258, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(304, 20);
             this.txtTelefono.TabIndex = 24;
             // 
             // lblTelefono
@@ -163,7 +163,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(150, 34);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(258, 20);
+            this.txtEmail.Size = new System.Drawing.Size(304, 20);
             this.txtEmail.TabIndex = 22;
             // 
             // lblEmail
@@ -179,7 +179,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(150, 3);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(258, 20);
+            this.txtNombre.Size = new System.Drawing.Size(304, 20);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
@@ -225,6 +225,18 @@
             this.panel4.Size = new System.Drawing.Size(774, 57);
             this.panel4.TabIndex = 29;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTitulo.Location = new System.Drawing.Point(288, 11);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(483, 37);
+            this.lblTitulo.TabIndex = 22;
+            this.lblTitulo.Text = "Registro";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -241,18 +253,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Alpha Power Fit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTitulo.Location = new System.Drawing.Point(288, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(483, 37);
-            this.lblTitulo.TabIndex = 22;
-            this.lblTitulo.Text = "Registro";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -288,6 +288,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblTelefono, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbTipoMembresia, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnGuardar, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.lblTipoMembresia, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.chkActivo, 1, 7);
@@ -297,10 +298,9 @@
             this.tableLayoutPanel1.Controls.Add(this.lblPassword, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaVencimiento, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmbTipoMembresia, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtTelefono, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cmbRol, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblTitulod, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.cmbRol, 1, 5);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(168, 145);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -317,6 +317,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 290);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(150, 189);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(304, 20);
+            this.txtPassword.TabIndex = 32;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
@@ -325,14 +333,6 @@
             this.lblPassword.Size = new System.Drawing.Size(70, 12);
             this.lblPassword.TabIndex = 31;
             this.lblPassword.Text = "Contraseña";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(150, 189);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(258, 20);
-            this.txtPassword.TabIndex = 32;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // MiembroNuevoUsuario
             // 

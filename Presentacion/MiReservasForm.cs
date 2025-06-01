@@ -22,10 +22,10 @@ namespace GymApp.Presentacion
                 new MiembroRepository(),
                 new ClaseRepository());
 
-            CargarReservasDelUsuario();
+            CargarReservas();
         }
 
-        private void CargarReservasDelUsuario()
+        private void CargarReservas()
         {
             try
             {
