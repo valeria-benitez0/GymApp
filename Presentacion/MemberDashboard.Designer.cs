@@ -31,10 +31,13 @@
             this.lblInfoMiembro = new System.Windows.Forms.Label();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.btnCancelarReserva = new System.Windows.Forms.Button();
-            this.btnReservar = new System.Windows.Forms.Button();
+            this.btnReservarClase = new System.Windows.Forms.Button();
             this.btnVerClases = new System.Windows.Forms.Button();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.btnRefrescarReservas = new System.Windows.Forms.Button();
+            this.lblVencimiento = new System.Windows.Forms.Label();
+            this.btnVerMisReservas = new System.Windows.Forms.Button();
+            this.btnMisReportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             // 
             // btnCancelarReserva
             // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(112, 308);
+            this.btnCancelarReserva.Location = new System.Drawing.Point(112, 196);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(166, 23);
             this.btnCancelarReserva.TabIndex = 9;
@@ -65,19 +68,19 @@
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
             this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click_1);
             // 
-            // btnReservar
+            // btnReservarClase
             // 
-            this.btnReservar.Location = new System.Drawing.Point(112, 203);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(150, 23);
-            this.btnReservar.TabIndex = 8;
-            this.btnReservar.Text = "Realizar reserva";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click_1);
+            this.btnReservarClase.Location = new System.Drawing.Point(112, 118);
+            this.btnReservarClase.Name = "btnReservarClase";
+            this.btnReservarClase.Size = new System.Drawing.Size(150, 23);
+            this.btnReservarClase.TabIndex = 8;
+            this.btnReservarClase.Text = "Realizar reserva";
+            this.btnReservarClase.UseVisualStyleBackColor = true;
+            this.btnReservarClase.Click += new System.EventHandler(this.btnReservar_Click_1);
             // 
             // btnVerClases
             // 
-            this.btnVerClases.Location = new System.Drawing.Point(112, 101);
+            this.btnVerClases.Location = new System.Drawing.Point(113, 58);
             this.btnVerClases.Name = "btnVerClases";
             this.btnVerClases.Size = new System.Drawing.Size(117, 23);
             this.btnVerClases.TabIndex = 7;
@@ -104,17 +107,48 @@
             this.btnRefrescarReservas.UseVisualStyleBackColor = true;
             this.btnRefrescarReservas.Click += new System.EventHandler(this.btnRefrescarReservas_Click);
             // 
+            // lblVencimiento
+            // 
+            this.lblVencimiento.AutoSize = true;
+            this.lblVencimiento.Location = new System.Drawing.Point(246, 398);
+            this.lblVencimiento.Name = "lblVencimiento";
+            this.lblVencimiento.Size = new System.Drawing.Size(16, 13);
+            this.lblVencimiento.TabIndex = 14;
+            this.lblVencimiento.Text = "...";
+            // 
+            // btnVerMisReservas
+            // 
+            this.btnVerMisReservas.Location = new System.Drawing.Point(112, 264);
+            this.btnVerMisReservas.Name = "btnVerMisReservas";
+            this.btnVerMisReservas.Size = new System.Drawing.Size(166, 23);
+            this.btnVerMisReservas.TabIndex = 15;
+            this.btnVerMisReservas.Text = "Cancelar reserva";
+            this.btnVerMisReservas.UseVisualStyleBackColor = true;
+            // 
+            // btnMisReportes
+            // 
+            this.btnMisReportes.Location = new System.Drawing.Point(113, 332);
+            this.btnMisReportes.Name = "btnMisReportes";
+            this.btnMisReportes.Size = new System.Drawing.Size(75, 23);
+            this.btnMisReportes.TabIndex = 16;
+            this.btnMisReportes.Text = "Reportes";
+            this.btnMisReportes.UseVisualStyleBackColor = true;
+            this.btnMisReportes.Click += new System.EventHandler(this.btnMisReportes_Click);
+            // 
             // MemberDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMisReportes);
+            this.Controls.Add(this.btnVerMisReservas);
+            this.Controls.Add(this.lblVencimiento);
             this.Controls.Add(this.btnRefrescarReservas);
             this.Controls.Add(this.lblBienvenida);
             this.Controls.Add(this.lblInfoMiembro);
             this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.btnCancelarReserva);
-            this.Controls.Add(this.btnReservar);
+            this.Controls.Add(this.btnReservarClase);
             this.Controls.Add(this.btnVerClases);
             this.Name = "MemberDashboard";
             this.Text = "MemberDashboard";
@@ -130,9 +164,12 @@
         private System.Windows.Forms.Label lblInfoMiembro;
         private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.Button btnCancelarReserva;
-        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Button btnReservarClase;
         private System.Windows.Forms.Button btnVerClases;
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Button btnRefrescarReservas;
+        private System.Windows.Forms.Label lblVencimiento;
+        private System.Windows.Forms.Button btnVerMisReservas;
+        private System.Windows.Forms.Button btnMisReportes;
     }
 }

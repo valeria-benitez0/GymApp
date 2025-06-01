@@ -15,11 +15,11 @@ namespace GymApp
         [STAThread]
         static void Main()
         {
+            //var conn = GymConnection.GetInstance().Connection;
+            //MessageBox.Show("Conexión: " + conn.ConnectionString);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Presentacion.LoginForm());
-            //var conn = GymConnection.GetInstance().Connection;
-            //MessageBox.Show(conn.ConnectionString); // si falla aquí, el problema es la conexión
 
         }
     }

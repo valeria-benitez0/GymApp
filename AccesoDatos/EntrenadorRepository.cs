@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using GymApp.Entidades;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
 
 namespace GymApp.AccesoDatos
 {
@@ -149,15 +152,22 @@ namespace GymApp.AccesoDatos
                 connection.Open();
                 // Utilizamos el procedimiento almacenado SP_EliminarEntrenador
                 string query = "EXEC SP_EliminarEntrenador @EntrenadorID;";
-                using (SqlCommand cmd = new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["GymDB"].ConnectionString))
                 {
-                    cmd.Parameters.AddWithValue("@EntrenadorID", id);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("SP_EliminarEntrenador", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EntrenadorID", id);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al eliminar el entrenador.", ex);
+                MessageBox.Show("Error real:\n" + (ex.InnerException?.Message ?? ex.Message),
+                    "ERROR DETALLADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

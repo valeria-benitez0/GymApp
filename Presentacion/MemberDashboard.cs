@@ -81,5 +81,11 @@ namespace GymApp.Presentacion
         {
 
         }
+
+        private void btnMisReportes_Click(object sender, EventArgs e)
+        {
+            MisReportesForm reportesForm = new MisReportesForm(usuarioActual);
+            reportesForm.ShowDialog();
+        }
     }
 }

@@ -86,7 +86,9 @@ namespace GymApp.Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar el entrenador: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al eliminar el entrenador:\n\n" + ex.Message +
+                    "\n\nDetalles:\n" + ex.StackTrace,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
