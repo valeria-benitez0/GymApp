@@ -10,6 +10,12 @@ namespace GymApp.AccesoDatos
 {
     public class ReservaRepository : IReservaRepository
     {
+        private SqlConnection connection;
+
+        public ReservaRepository()
+        {
+            connection = GymConnection.GetInstance().Connection;
+        }
         public int RegistrarReserva(Reserva reserva)
         {
             int newId = 0;
@@ -39,6 +45,7 @@ namespace GymApp.AccesoDatos
             return newId;
         }
 
+
         public void CancelarReserva(int reservaId)
         {
             SqlConnection connection = GymConnection.GetInstance().Connection;
@@ -62,7 +69,37 @@ namespace GymApp.AccesoDatos
                 connection.Close();
             }
         }
-
+        public IEnumerable<Acceso> ObtenerTodos()
+        {
+            var lista = new List<Acceso>();
+            try
+            {
+                connection.Open();
+                string query = "SELECT * FROM Accesos";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            lista.Add(new Acceso
+                            {
+                                AccesoID = Convert.ToInt32(reader["AccesoID"]),
+                                UsuarioID = Convert.ToInt32(reader["UsuarioID"]),
+                                ClaseID = Convert.ToInt32(reader["ClaseID"]),
+                                FechaAcceso = Convert.ToDateTime(reader["FechaAcceso"]),
+                                EstadoAcceso = reader["EstadoAcceso"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return lista;
+        }
         public Reserva ObtenerPorId(int reservaId)
         {
             Reserva reserva = null;

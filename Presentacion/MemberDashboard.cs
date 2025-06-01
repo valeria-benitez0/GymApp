@@ -14,27 +14,27 @@ using System.Configuration;
 
 namespace GymApp.Presentacion
 {
-        public partial class MemberDashboard : Form
+    public partial class MemberDashboard : Form
+    {
+        private Miembro usuarioActual;
+        private ReservaService reservaService;
+
+        public MemberDashboard(Miembro miembro)
         {
-            private Miembro usuarioActual;
-            private ReservaService reservaService;
+            InitializeComponent();
+            usuarioActual = miembro;
+            lblBienvenida.Text = $"Bienvenido, {usuarioActual.Nombre}";
 
-            public MemberDashboard(Miembro miembro)
-            {
-                InitializeComponent();
-                usuarioActual = miembro;
-                lblBienvenida.Text = $"Bienvenido, {usuarioActual.Nombre}";
+            // Mostrar información adicional opcional
+            lblInfoMiembro.Text = $"Tipo de Membresía: {usuarioActual.TipoMembresia}\n" +
+                                  $"Vencimiento: {usuarioActual.FechaVencimientoMembresia.ToShortDateString()}";
 
-                // Mostrar información adicional opcional
-                lblInfoMiembro.Text = $"Tipo de Membresía: {usuarioActual.TipoMembresia}\n" +
-                                      $"Vencimiento: {usuarioActual.FechaVencimientoMembresia.ToShortDateString()}";
+            // Inicializar el ReservaService para poder obtener las reservas del usuario
+            reservaService = new ReservaService(new ReservaRepository(), new MiembroRepository(), new ClaseRepository());
 
-                // Inicializar el ReservaService para poder obtener las reservas del usuario
-                reservaService = new ReservaService(new ReservaRepository(), new MiembroRepository(), new ClaseRepository());
-
-                // Cargar inicialmente el listado de reservas
-                CargarReservas();
-            }
+            // Cargar inicialmente el listado de reservas
+            CargarReservas();
+        }
 
         private void CargarReservas()
         {
@@ -86,6 +86,11 @@ namespace GymApp.Presentacion
         {
             MisReportesForm reportesForm = new MisReportesForm(usuarioActual);
             reportesForm.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

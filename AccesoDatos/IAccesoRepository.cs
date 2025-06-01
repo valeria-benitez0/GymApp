@@ -12,5 +12,9 @@ namespace GymApp.AccesoDatos
         int InsertarAcceso(Acceso acceso);
         IEnumerable<ReporteAsistenciaDTO> GenerarReporteAsistencia(DateTime fechaInicio, DateTime fechaFin);
         IEnumerable<NotificacionReservaDTO> ObtenerNotificacionesReservasPendientes();
+        IEnumerable<Acceso> ObtenerAccesosPorUsuario(int usuarioId);
+        IEnumerable<Acceso> ObtenerAccesosPorClase(int claseId);
+        IEnumerable<Acceso> ObtenerAccesosPorClaseYFecha(int claseId, DateTime desde, DateTime hasta);
+        IEnumerable<Acceso> ObtenerTodos();
     }
 }

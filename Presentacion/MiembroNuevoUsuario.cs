@@ -53,7 +53,7 @@ namespace GymApp.Presentacion
             dtpFechaVencimiento.Value = DateTime.Now.AddMonths(1);
 
             // Establecer el título según el modo (nuevo o edición)
-            lblTitulo.Text = (miembroActual == null) ? "Nuevo Miembro" : "Editar Miembro";
+            lblTitulod.Text = (miembroActual == null) ? "Nuevo Miembro" : "Editar Miembro";
         }
 
         /// Carga los datos existentes del miembro en el formulario para edición.
@@ -71,7 +71,7 @@ namespace GymApp.Presentacion
         }
 
         /// Evento para guardar los datos del miembro (registrar o actualizar).
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -130,6 +130,11 @@ namespace GymApp.Presentacion
                 lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

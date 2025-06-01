@@ -17,7 +17,9 @@ namespace GymApp.AccesoDatos
         public IMiembroRepository Miembros { get; private set; }
         public IClaseRepository Clases { get; private set; }
         public IReservaRepository Reservas { get; private set; }
-        // Puedes agregar IEntrenadorRepository, IAccesoRepository, etc.
+        public IEntrenadorRepository Entrenador { get; private set; }
+        public IAccesoRepository Acceso { get; private set; }
+
 
         public UnitOfWork()
         {
@@ -25,9 +27,9 @@ namespace GymApp.AccesoDatos
             connection.Open();
             transaction = connection.BeginTransaction();
 
-            // Instanciar repositorios. Si tu diseño soporta pasar la conexión o transacción,
-            // adáptalo para que estos repositorios operen en la misma transacción.
+            Acceso = new AccesoRepository();
             Miembros = new MiembroRepository();
+            Entrenador = new EntrenadorRepository();
             Clases = new ClaseRepository();
             Reservas = new ReservaRepository();
         }

@@ -57,6 +57,7 @@
             this.btnCancelarReserva.TabIndex = 42;
             this.btnCancelarReserva.Text = "Cancelar";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.btnCancelarReserva_Click);
             // 
             // dgvReservas
             // 
@@ -110,6 +111,7 @@
             this.btnRegistrarReserva.TabIndex = 36;
             this.btnRegistrarReserva.Text = "Reservar";
             this.btnRegistrarReserva.UseVisualStyleBackColor = true;
+            this.btnRegistrarReserva.Click += new System.EventHandler(this.btnRegistrarReserva_Click);
             // 
             // dtpFechaReserva
             // 

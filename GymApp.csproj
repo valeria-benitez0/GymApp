@@ -39,6 +39,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.5\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,7 +67,9 @@
     <Compile Include="Entidades\Clase.cs" />
     <Compile Include="Entidades\Entrenador.cs" />
     <Compile Include="Entidades\Miembro.cs" />
+    <Compile Include="Entidades\PopularidadClaseDTO.cs" />
     <Compile Include="Entidades\Reserva.cs" />
+    <Compile Include="Factories\NotificacionFactory.cs" />
     <Compile Include="Factories\ReporteFactory.cs" />
     <Compile Include="Negocio\AccesoService.cs" />
     <Compile Include="Negocio\ClaseService.cs" />
@@ -102,12 +105,6 @@
     </Compile>
     <Compile Include="Presentacion\ClasesForm.Designer.cs">
       <DependentUpon>ClasesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\ens.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\ens.Designer.cs">
-      <DependentUpon>ens.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\EntrenadoresForm.cs">
       <SubType>Form</SubType>
@@ -151,6 +148,18 @@
     <Compile Include="Presentacion\MiembrosForm.Designer.cs">
       <DependentUpon>MiembrosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\MiReservasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MiReservasForm.Designer.cs">
+      <DependentUpon>MiReservasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MisReportesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MisReportesForm.Designer.cs">
+      <DependentUpon>MisReportesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\ReportesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +171,12 @@
     </Compile>
     <Compile Include="Presentacion\ReservaForm.Designer.cs">
       <DependentUpon>ReservaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\VerClasesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\VerClasesForm.Designer.cs">
+      <DependentUpon>VerClasesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ClasesForm.resx">
       <DependentUpon>ClasesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\ens.resx">
-      <DependentUpon>ens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\EntrenadoresForm.resx">
       <DependentUpon>EntrenadoresForm.cs</DependentUpon>
@@ -204,11 +216,20 @@
     <EmbeddedResource Include="Presentacion\MiembrosForm.resx">
       <DependentUpon>MiembrosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MiReservasForm.resx">
+      <DependentUpon>MiReservasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MisReportesForm.resx">
+      <DependentUpon>MisReportesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ReportesForm.resx">
       <DependentUpon>ReportesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\ReservaForm.resx">
       <DependentUpon>ReservaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\VerClasesForm.resx">
+      <DependentUpon>VerClasesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

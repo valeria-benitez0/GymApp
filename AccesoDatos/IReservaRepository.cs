@@ -12,4 +12,6 @@ public interface IReservaRepository
     Reserva ObtenerPorId(int reservaId);
     int ContarReservasActivasPorClase(int claseId);
     IEnumerable<Reserva> ObtenerReservasPorMiembro(int usuarioId);
+
+    IEnumerable<Acceso> ObtenerTodos();
 }

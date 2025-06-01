@@ -56,7 +56,7 @@ namespace GymApp.Presentacion
             }
         }
 
-        private void btnRegistrarReserva_Click_1(object sender, EventArgs e)
+        private void btnRegistrarReserva_Click(object sender, EventArgs e)
         {
             try
             {
@@ -78,6 +78,7 @@ namespace GymApp.Presentacion
                     "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 CargarReservas();
+
             }
             catch (Exception ex)
             {
@@ -101,7 +102,7 @@ namespace GymApp.Presentacion
             }
         }
 
-        private void btnCancelarReserva_Click_1(object sender, EventArgs e)
+        private void btnCancelarReserva_Click(object sender, EventArgs e)
         {
             try
             {

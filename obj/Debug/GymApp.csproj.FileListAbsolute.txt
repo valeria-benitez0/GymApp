@@ -22,6 +22,8 @@ C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\Gym
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.EntrenadorNuevoForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.AccesoForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ReportesForm.resources
-C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ens.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.ReservaForm.resources
 C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MiembroNuevoUsuario.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MiReservasForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.MisReportesForm.resources
+C:\Users\Valeria\OneDrive\Documentos\Herramientas de programación II\GymApp\GymApp\obj\Debug\GymApp.Presentacion.VerClasesForm.resources
