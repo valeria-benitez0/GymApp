@@ -18,17 +18,13 @@ namespace GymApp.Negocio
             this.entrenadorRepository = entrenadorRepository;
         }
 
-        /// <summary>
         /// Obtiene todos los entrenadores.
-        /// </summary>
         public IEnumerable<Entrenador> ObtenerTodosLosEntrenadores()
         {
             return entrenadorRepository.ObtenerTodos();
         }
 
-        /// <summary>
         /// Obtiene un entrenador por ID.
-        /// </summary>
         public Entrenador ObtenerPorId(int id)
         {
             var entrenador = entrenadorRepository.ObtenerPorId(id);
@@ -37,9 +33,7 @@ namespace GymApp.Negocio
             return entrenador;
         }
 
-        /// <summary>
         /// Registra un nuevo entrenador con validaciones.
-        /// </summary>
         public void RegistrarEntrenador(Entrenador entrenador)
         {
             if (string.IsNullOrWhiteSpace(entrenador.Nombre))
@@ -52,9 +46,7 @@ namespace GymApp.Negocio
             entrenadorRepository.Crear(entrenador);
         }
 
-        /// <summary>
         /// Actualiza la información de un entrenador, con validaciones.
-        /// </summary>
         public void ActualizarEntrenador(Entrenador entrenador)
         {
             if (entrenador == null)
@@ -69,9 +61,7 @@ namespace GymApp.Negocio
             entrenadorRepository.Actualizar(entrenador);
         }
 
-        /// <summary>
         /// Elimina un entrenador, comprobando que no tenga clases asignadas.
-        /// </summary>
         public void EliminarEntrenador(int id)
         {
             var entrenador = entrenadorRepository.ObtenerPorId(id);
@@ -84,9 +74,7 @@ namespace GymApp.Negocio
             entrenadorRepository.Eliminar(id);
         }
 
-        /// <summary>
         /// Verifica si el entrenador tiene clases asignadas.
-        /// </summary>
         private bool EntrenadorTieneClases(int entrenadorID)
         {
             bool tieneClases = false;
